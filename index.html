@@ -20,8 +20,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles.css?v=4" />
-    <script src="./analytics.config.js?v=4"></script>
+    <link rel="stylesheet" href="./styles.css?v=5" />
+    <script src="./analytics.config.js?v=5"></script>
   </head>
   <body>
     <nav class="top-nav" aria-label="Secciones principales">
@@ -115,7 +115,7 @@
     </header>
 
     <main>
-      <section class="section section-light reveal" id="por-que-postular">
+      <section class="section section-intro-modern reveal" id="por-que-postular">
         <div class="container">
           <h2 class="text-center">Más que un concurso, una experiencia de emprendimiento</h2>
           <p class="section-intro text-center">
@@ -329,23 +329,25 @@
         </div>
       </section>
 
-      <section class="section container reveal" id="video">
-        <h2 class="text-center">Así se vivió Pitch UChile 2025</h2>
-        <p class="section-intro text-center">
-          De la idea al escenario: conoce la experiencia completa de quienes participaron.
-        </p>
-        <div class="video-wrapper" data-track-view="recap_video_view">
-          <iframe
-            src="https://www.youtube.com/embed/-StRyxGgH3o"
-            title="Concurso Pitch UChile Emprende con impacto 2025"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+      <section class="section section-video-modern reveal" id="video">
+        <div class="container">
+          <h2 class="text-center">Así se vivió Pitch UChile 2025</h2>
+          <p class="section-intro text-center">
+            De la idea al escenario: conoce la experiencia completa de quienes participaron.
+          </p>
+          <div class="video-wrapper" data-track-view="recap_video_view">
+            <iframe
+              src="https://www.youtube.com/embed/-StRyxGgH3o"
+              title="Concurso Pitch UChile Emprende con impacto 2025"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </section>
 
-      <section class="section section-light reveal" id="etapas-proyecto">
+      <section class="section section-stage-modern reveal" id="etapas-proyecto">
         <div class="container">
           <h2 class="text-center">Este concurso es para ti si estás en esta etapa</h2>
           <div class="stage-grid">
@@ -599,66 +601,173 @@
         </div>
       </section>
 
-      <section class="section winners reveal" id="casos">
+      <section class="section section-winners-modern reveal" id="casos">
+        <div class="winners-deco" aria-hidden="true">
+          <span class="winners-blob winners-blob--blue"></span>
+          <span class="winners-blob winners-blob--purple"></span>
+        </div>
         <div class="container">
-          <h2 class="text-center">Ganadores y menciones 2025</h2>
-          <p class="section-intro text-center">Proyectos que ya dieron el salto.</p>
+          <h2 class="text-center winners-title">
+            Ganadores y menciones <span>2025</span>
+          </h2>
+          <p class="section-intro text-center winners-intro">
+            Proyectos que ya dieron el salto. Conoce a los líderes de esta edición.
+          </p>
 
-          <h3 class="category">Categoría Ideación</h3>
-          <div class="cards cards-4">
-            <article class="person-card">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/salgado.png" alt="Felipe Salgado" />
-              <h4>Felipe Salgado</h4>
-              <p class="project">Lagrimark</p>
-              <p>Facultad de Medicina</p>
-            </article>
-            <article class="person-card">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/thomas.png" alt="Tomas Jackson" />
-              <h4>Tomas Jackson</h4>
-              <p class="project">Quickron</p>
-              <p>FCFM</p>
-            </article>
-            <article class="person-card">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/baro.png" alt="Gerardo Baro" />
-              <h4>Gerardo Baro</h4>
-              <p class="project">Sefit</p>
-              <p>FCFM</p>
-            </article>
-            <article class="person-card">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/almendras.png" alt="Alonso Almendras" />
-              <h4>Alonso Almendras</h4>
-              <p class="project">VelaMicro</p>
-              <p>FCFM</p>
-            </article>
+          <div class="winners-block">
+            <div class="winners-category-head">
+              <span class="winners-category-line" aria-hidden="true"></span>
+              <h3>Categoría Ideación</h3>
+              <span class="winners-category-line" aria-hidden="true"></span>
+            </div>
+
+            <div class="winners-grid winners-grid--4">
+              <article class="winner-card winner-card--featured winner-card--offset-up reveal">
+                <span class="winner-card__blob winner-card__blob--blue" aria-hidden="true"></span>
+                <div class="winner-profile">
+                  <img
+                    class="winner-profile__img"
+                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/salgado.png"
+                    alt="Felipe Salgado"
+                    loading="lazy"
+                  />
+                  <span class="winner-badge winner-badge--gold">1</span>
+                </div>
+                <div class="winner-card__body">
+                  <h4>Felipe Salgado</h4>
+                  <p class="winner-project">Lagrimark</p>
+                  <span class="winner-faculty">Facultad de Medicina</span>
+                </div>
+              </article>
+
+              <article class="winner-card winner-card--offset-down reveal">
+                <span class="winner-card__blob winner-card__blob--purple" aria-hidden="true"></span>
+                <div class="winner-profile">
+                  <img
+                    class="winner-profile__img"
+                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/thomas.png"
+                    alt="Tomas Jackson"
+                    loading="lazy"
+                  />
+                  <span class="winner-badge winner-badge--silver">2</span>
+                </div>
+                <div class="winner-card__body">
+                  <h4>Tomas Jackson</h4>
+                  <p class="winner-project">Quickron</p>
+                  <span class="winner-faculty">FCFM</span>
+                </div>
+              </article>
+
+              <article class="winner-card winner-card--offset-mid reveal">
+                <span class="winner-card__blob winner-card__blob--blue" aria-hidden="true"></span>
+                <div class="winner-profile">
+                  <img
+                    class="winner-profile__img"
+                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/baro.png"
+                    alt="Gerardo Baro"
+                    loading="lazy"
+                  />
+                  <span class="winner-badge winner-badge--bronze">3</span>
+                </div>
+                <div class="winner-card__body">
+                  <h4>Gerardo Baro</h4>
+                  <p class="winner-project">Sefit</p>
+                  <span class="winner-faculty">FCFM</span>
+                </div>
+              </article>
+
+              <article class="winner-card winner-card--offset-low reveal">
+                <span class="winner-card__blob winner-card__blob--purple" aria-hidden="true"></span>
+                <div class="winner-profile">
+                  <img
+                    class="winner-profile__img"
+                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/almendras.png"
+                    alt="Alonso Almendras"
+                    loading="lazy"
+                  />
+                  <span class="winner-badge winner-badge--blue">4</span>
+                </div>
+                <div class="winner-card__body">
+                  <h4>Alonso Almendras</h4>
+                  <p class="winner-project">VelaMicro</p>
+                  <span class="winner-faculty">FCFM</span>
+                </div>
+              </article>
+            </div>
           </div>
 
-          <h3 class="category">Categoría Prototipo</h3>
-          <div class="cards cards-3">
-            <article class="person-card">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/pape.png" alt="Constanza Pape" />
-              <h4>Constanza Pape</h4>
-              <p class="project">Aplicador Mesess Concept</p>
-              <p>FEN</p>
-            </article>
-            <article class="person-card">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/araya2.png" alt="Maykeel Araya" />
-              <h4>Maykeel Araya</h4>
-              <p class="project">Clervice</p>
-              <p>FEN</p>
-            </article>
-            <article class="person-card">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/castro.png" alt="Diland Castro" />
-              <h4>Diland Castro</h4>
-              <p class="project">Blummo</p>
-              <p>FCFM</p>
-            </article>
+          <div class="winners-block">
+            <div class="winners-category-head">
+              <span class="winners-category-line" aria-hidden="true"></span>
+              <h3>Categoría Prototipo</h3>
+              <span class="winners-category-line" aria-hidden="true"></span>
+            </div>
+
+            <div class="winners-grid winners-grid--3">
+              <article class="winner-card winner-card--featured winner-card--offset-up-lg reveal">
+                <span class="winner-card__blob winner-card__blob--blue" aria-hidden="true"></span>
+                <div class="winner-profile winner-profile--lead">
+                  <img
+                    class="winner-profile__img"
+                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/pape.png"
+                    alt="Constanza Pape"
+                    loading="lazy"
+                  />
+                  <span class="winner-badge winner-badge--gold winner-badge--lg">1</span>
+                </div>
+                <div class="winner-card__body">
+                  <h4>Constanza Pape</h4>
+                  <p class="winner-project">Aplicador Mesess Concept</p>
+                  <span class="winner-faculty">FEN</span>
+                </div>
+              </article>
+
+              <article class="winner-card winner-card--offset-mid reveal">
+                <span class="winner-card__blob winner-card__blob--purple" aria-hidden="true"></span>
+                <div class="winner-profile">
+                  <img
+                    class="winner-profile__img"
+                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/araya2.png"
+                    alt="Maykeel Araya"
+                    loading="lazy"
+                  />
+                  <span class="winner-badge winner-badge--silver">2</span>
+                </div>
+                <div class="winner-card__body">
+                  <h4>Maykeel Araya</h4>
+                  <p class="winner-project">Clervice</p>
+                  <span class="winner-faculty">FEN</span>
+                </div>
+              </article>
+
+              <article class="winner-card winner-card--offset-down-lg reveal">
+                <span class="winner-card__blob winner-card__blob--blue" aria-hidden="true"></span>
+                <div class="winner-profile">
+                  <img
+                    class="winner-profile__img"
+                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/castro.png"
+                    alt="Diland Castro"
+                    loading="lazy"
+                  />
+                  <span class="winner-badge winner-badge--bronze">3</span>
+                </div>
+                <div class="winner-card__body">
+                  <h4>Diland Castro</h4>
+                  <p class="winner-project">Blummo</p>
+                  <span class="winner-faculty">FCFM</span>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section gallery-section reveal" id="galeria">
+      <section class="section section-gallery-modern reveal" id="galeria">
         <div class="container">
           <h2 class="text-center">Galería de imágenes 2025</h2>
+          <p class="section-intro text-center">
+            Un vistazo a los momentos clave de la edición 2025 y su comunidad emprendedora.
+          </p>
           <div class="gallery-grid">
             <a class="gallery-item gallery-item--lead" href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/8.jpg" target="_blank" rel="noreferrer">
               <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/8-400x284.jpg" alt="Pitch 2025" loading="lazy" />
@@ -688,7 +797,7 @@
         </div>
       </section>
 
-      <section class="section final-cta" id="postula">
+      <section class="section section-final-cta-modern final-cta" id="postula">
         <div class="container final-cta-inner">
           <h2>Es tu momento de emprender</h2>
           <p>Postula y lleva tu idea al siguiente nivel con apoyo real.</p>
@@ -702,28 +811,30 @@
         </div>
       </section>
 
-      <section class="section container reveal" id="formulario">
-        <div class="form-layout">
-          <div>
-            <h2>Convocatoria 2025</h2>
-            <p class="section-intro">
-              Completa tus datos y te contactaremos con información del proceso.
-            </p>
-            <p>
-              <strong>Contacto:</strong>
-              <a href="mailto:pitch_uchile@fen.uchile.cl">pitch_uchile@fen.uchile.cl</a>
-            </p>
+      <section class="section section-form-modern reveal" id="formulario">
+        <div class="container">
+          <div class="form-layout">
+            <div>
+              <h2>Convocatoria 2025</h2>
+              <p class="section-intro">
+                Completa tus datos y te contactaremos con información del proceso.
+              </p>
+              <p>
+                <strong>Contacto:</strong>
+                <a href="mailto:pitch_uchile@fen.uchile.cl">pitch_uchile@fen.uchile.cl</a>
+              </p>
+            </div>
+            <form class="contact-form" data-track-form="pitch_form">
+              <p class="form-success" hidden>
+                ¡Gracias! Registramos tu interés. Te contactaremos pronto.
+              </p>
+              <input type="text" placeholder="Nombre" name="nombre" required />
+              <input type="email" placeholder="Email" name="email" required />
+              <input type="text" placeholder="Teléfono" name="telefono" />
+              <textarea placeholder="Cuéntanos tu proyecto" name="consulta" required></textarea>
+              <button type="submit">Enviar postulación</button>
+            </form>
           </div>
-          <form class="contact-form" data-track-form="pitch_form">
-            <p class="form-success" hidden>
-              ¡Gracias! Registramos tu interés. Te contactaremos pronto.
-            </p>
-            <input type="text" placeholder="Nombre" name="nombre" required />
-            <input type="email" placeholder="Email" name="email" required />
-            <input type="text" placeholder="Teléfono" name="telefono" />
-            <textarea placeholder="Cuéntanos tu proyecto" name="consulta" required></textarea>
-            <button type="submit">Enviar postulación</button>
-          </form>
         </div>
       </section>
     </main>
@@ -734,8 +845,8 @@
       </div>
     </footer>
 
-    <script src="./ab-test.js?v=4" defer></script>
-    <script src="./analytics.js?v=4" defer></script>
-    <script src="./ui.js?v=4" defer></script>
+    <script src="./ab-test.js?v=5" defer></script>
+    <script src="./analytics.js?v=5" defer></script>
+    <script src="./ui.js?v=5" defer></script>
   </body>
 </html>
