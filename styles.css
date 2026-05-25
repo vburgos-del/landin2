@@ -1115,6 +1115,388 @@ a {
   border-bottom: 2px solid var(--yellow);
 }
 
+/* Modern style: Beneficios + Premios */
+.section-benefits-modern,
+.section-premios-modern {
+  position: relative;
+  overflow: hidden;
+  background-color: #f8fafc;
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.section-benefits-modern .container,
+.section-premios-modern .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-premios-modern {
+  padding-top: 52px;
+}
+
+.benefits-title,
+.premios-title {
+  font-size: clamp(2rem, 4.6vw, 3rem);
+  background: linear-gradient(90deg, var(--blue), var(--purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.benefits-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.benefits-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.38;
+  animation: routeBlobPulse 6s ease-in-out infinite;
+}
+
+.benefits-blob--blue {
+  top: 8%;
+  left: 8%;
+  width: 26rem;
+  height: 26rem;
+  background: #c7d2fe;
+}
+
+.benefits-blob--purple {
+  right: 6%;
+  bottom: 14%;
+  width: 22rem;
+  height: 22rem;
+  background: #f5d0fe;
+  animation-delay: 2s;
+}
+
+.section-benefits-modern .benefits-grid {
+  gap: 2rem;
+}
+
+.section-benefits-modern .benefit-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  box-shadow: 0 16px 34px rgba(51, 65, 85, 0.1);
+  backdrop-filter: blur(12px);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out),
+    border-color 0.35s var(--ease-out), background 0.35s var(--ease-out);
+}
+
+.section-benefits-modern .benefit-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  background: linear-gradient(90deg, var(--blue), var(--purple));
+  transition: opacity 0.25s ease;
+}
+
+.section-benefits-modern .benefit-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(75, 32, 127, 0.15);
+  border-color: rgba(75, 32, 127, 0.2);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.section-benefits-modern .benefit-card:hover::before {
+  opacity: 1;
+}
+
+.benefit-icon-blob {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(0, 51, 160, 0.06), rgba(75, 32, 127, 0.06));
+  z-index: 0;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.section-benefits-modern .benefit-card:hover .benefit-icon-blob {
+  transform: scale(1.5);
+}
+
+.benefit-icon-wrap,
+.section-benefits-modern .benefit-card h3,
+.benefit-list {
+  position: relative;
+  z-index: 1;
+}
+
+.benefit-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  font-size: 1.45rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.benefit-card--finance .benefit-icon {
+  background: #eff6ff;
+  color: var(--blue);
+}
+
+.benefit-card--training .benefit-icon {
+  background: #f5f3ff;
+  color: var(--purple);
+}
+
+.benefit-card--network .benefit-icon {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.section-benefits-modern .benefit-card:hover .benefit-icon {
+  background: var(--blue);
+  color: #fff;
+}
+
+.benefit-card--training:hover .benefit-icon {
+  background: var(--purple);
+}
+
+.benefit-card--network:hover .benefit-icon {
+  background: #4f46e5;
+}
+
+.section-benefits-modern .benefit-card h3 {
+  margin: 14px 0 12px;
+  font-size: 1.65rem;
+}
+
+.benefit-card--finance h3 {
+  color: var(--blue);
+}
+
+.benefit-card--training h3 {
+  color: var(--purple);
+}
+
+.benefit-card--network h3 {
+  color: #312e81;
+}
+
+.benefit-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.benefit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #475569;
+}
+
+.benefit-list li i {
+  color: #22c55e;
+  margin-top: 3px;
+  font-size: 0.95rem;
+}
+
+.benefit-list li strong {
+  color: #1f2937;
+}
+
+.bases-link {
+  margin-top: 20px;
+}
+
+.bases-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bases-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.12);
+}
+
+.bases-pill--alt {
+  margin-top: 8px;
+}
+
+.premios-total strong {
+  font-size: clamp(1.5rem, 3.8vw, 2.2rem);
+  color: #d97706;
+  text-shadow: 0 0 20px rgba(75, 32, 127, 0.25);
+}
+
+.section-premios-modern .prize-boards {
+  gap: 2rem;
+}
+
+.section-premios-modern .prize-panel {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 38px rgba(30, 41, 59, 0.08);
+}
+
+.prize-head {
+  position: relative;
+  padding: 2rem 2rem 1.4rem;
+}
+
+.prize-panel--idea .prize-head {
+  background: linear-gradient(135deg, rgba(0, 51, 160, 0.12), transparent);
+}
+
+.prize-panel--proto .prize-head {
+  background: linear-gradient(135deg, rgba(75, 32, 127, 0.12), transparent);
+}
+
+.prize-head-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.prize-panel--idea .prize-head-label {
+  color: var(--blue);
+}
+
+.prize-panel--proto .prize-head-label {
+  color: var(--purple);
+}
+
+.prize-head h3 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  color: #1f2937;
+  line-height: 1.2;
+}
+
+.section-premios-modern .prize-list {
+  margin: 0;
+  padding: 0 2rem;
+  list-style: none;
+}
+
+.section-premios-modern .prize-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px dashed #dbe2ea;
+  transition: background-color 0.2s ease, padding 0.2s ease;
+}
+
+.section-premios-modern .prize-row:hover {
+  background: #f1f5f9;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 0.5rem;
+}
+
+.section-premios-modern .prize-rank {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #475569;
+  display: inline-grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.section-premios-modern .prize-row:first-child .prize-rank {
+  background: rgba(0, 51, 160, 0.12);
+  color: var(--blue);
+}
+
+.prize-panel--proto .prize-row:first-child .prize-rank {
+  background: rgba(75, 32, 127, 0.12);
+  color: var(--purple);
+}
+
+.section-premios-modern .prize-row strong {
+  font-size: 1.15rem;
+  color: #334155;
+}
+
+.section-premios-modern .prize-row:first-child strong {
+  font-size: 1.35rem;
+}
+
+.prize-panel--idea .prize-row:first-child strong {
+  color: var(--blue);
+}
+
+.prize-panel--proto .prize-row:first-child strong {
+  color: var(--purple);
+}
+
+.prize-mentions {
+  margin: 1.2rem 2rem 2rem;
+  padding: 1rem 1rem;
+  background: #f8fafc;
+  border-radius: 1rem;
+}
+
+.prize-mentions p {
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.92rem;
+}
+
+.prize-mentions p + p {
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.prize-mentions span {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.prize-mentions strong {
+  color: #475569;
+  white-space: nowrap;
+}
+
 .winners {
   background: linear-gradient(180deg, #fbfdff, #edf3ff);
 }
@@ -1315,6 +1697,11 @@ a {
 
   .gallery-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .prize-mentions strong {
+    white-space: normal;
+    text-align: right;
   }
 }
 

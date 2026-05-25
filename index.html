@@ -20,8 +20,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles.css?v=3" />
-    <script src="./analytics.config.js?v=3"></script>
+    <link rel="stylesheet" href="./styles.css?v=4" />
+    <script src="./analytics.config.js?v=4"></script>
   </head>
   <body>
     <nav class="top-nav" aria-label="Secciones principales">
@@ -368,83 +368,114 @@
         </div>
       </section>
 
-      <section class="section reveal" id="beneficios">
+      <section class="section section-benefits-modern reveal" id="beneficios">
+        <div class="benefits-deco" aria-hidden="true">
+          <span class="benefits-blob benefits-blob--blue"></span>
+          <span class="benefits-blob benefits-blob--purple"></span>
+        </div>
         <div class="container">
-          <h2 class="text-center">Lo que obtendrás</h2>
+          <h2 class="text-center benefits-title">Lo que obtendrás</h2>
+          <p class="section-intro text-center">
+            Más allá del capital, una experiencia integral para potenciar tu impacto.
+          </p>
           <div class="benefits-grid">
-            <article class="benefit-card">
-              <h3><i class="fa-solid fa-sack-dollar" aria-hidden="true"></i> Financiamiento</h3>
-              <ul>
-                <li>Ideación: hasta $800.000 (1° lugar)</li>
-                <li>Prototipo: hasta $2.000.000 (1° lugar)</li>
-                <li>Menciones “Mejor Pitch” e “Innovación e impacto”</li>
+            <article class="benefit-card benefit-card--finance">
+              <span class="benefit-icon-blob" aria-hidden="true"></span>
+              <div class="benefit-icon-wrap">
+                <span class="benefit-icon" aria-hidden="true"><i class="fa-solid fa-sack-dollar"></i></span>
+              </div>
+              <h3>Financiamiento</h3>
+              <ul class="benefit-list">
+                <li><i class="fa-solid fa-check"></i><span><strong>Ideación:</strong> hasta $800.000 (1° lugar)</span></li>
+                <li><i class="fa-solid fa-check"></i><span><strong>Prototipo:</strong> hasta $2.000.000 (1° lugar)</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Menciones “Mejor Pitch” e “Innovación e impacto”</span></li>
               </ul>
             </article>
-            <article class="benefit-card">
-              <h3><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i> Formación</h3>
-              <ul>
-                <li>Bootcamp intensivo con foco en ejecución</li>
-                <li>Mentorías y acompañamiento estratégico</li>
+            <article class="benefit-card benefit-card--training">
+              <span class="benefit-icon-blob" aria-hidden="true"></span>
+              <div class="benefit-icon-wrap">
+                <span class="benefit-icon" aria-hidden="true"><i class="fa-solid fa-chalkboard-user"></i></span>
+              </div>
+              <h3>Formación</h3>
+              <ul class="benefit-list">
+                <li><i class="fa-solid fa-check"></i><span>Bootcamp intensivo con foco en ejecución</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Mentorías y acompañamiento estratégico</span></li>
               </ul>
             </article>
-            <article class="benefit-card">
-              <h3><i class="fa-solid fa-globe" aria-hidden="true"></i> Redes y visibilidad</h3>
-              <ul>
-                <li>Exposición frente a jurado y comunidad</li>
-                <li>Difusión y conexiones con el ecosistema</li>
+            <article class="benefit-card benefit-card--network">
+              <span class="benefit-icon-blob" aria-hidden="true"></span>
+              <div class="benefit-icon-wrap">
+                <span class="benefit-icon" aria-hidden="true"><i class="fa-solid fa-globe"></i></span>
+              </div>
+              <h3>Redes y visibilidad</h3>
+              <ul class="benefit-list">
+                <li><i class="fa-solid fa-check"></i><span>Exposición frente a jurado y comunidad</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Difusión y conexiones con el ecosistema</span></li>
               </ul>
             </article>
           </div>
           <p class="bases-link text-center">
             <a
+              class="bases-pill"
               href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/01/0030N2025_Bases-Concurso-PITCH_Emprende-con-Impacto-1.pdf"
               target="_blank"
               rel="noreferrer"
               data-track-click="bases_legales_click"
               data-track-location="beneficios"
-              >Infórmate de las bases legales 2025 (PDF)</a
+              ><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Infórmate de las bases legales 2025 (PDF)</a
             >
           </p>
         </div>
       </section>
 
-      <section class="section section-premios reveal" id="premios-detalle">
+      <section class="section section-premios-modern reveal" id="premios-detalle">
         <div class="container">
-          <h2 class="text-center">Premios</h2>
-          <p class="section-intro text-center">
+          <h2 class="text-center premios-title">Premios</h2>
+          <p class="section-intro text-center premios-total">
             Fondo total de <strong>$8.500.000</strong> según bases y condiciones generales del concurso.
           </p>
           <div class="prize-boards">
-            <article class="prize-panel">
-              <h3 class="pill-title">Categoría Idea</h3>
+            <article class="prize-panel prize-panel--idea">
+              <div class="prize-head">
+                <span class="prize-head-label">Categoría</span>
+                <h3>Idea</h3>
+              </div>
               <ul class="prize-list">
-                <li><span class="prize-rank">1°</span> $800.000</li>
-                <li><span class="prize-rank">2°</span> $600.000</li>
-                <li><span class="prize-rank">3°</span> $400.000</li>
-                <li><span class="prize-rank">4°</span> $250.000</li>
-                <li>2 menciones “Mejor Pitch” · $150.000 c/u</li>
-                <li>1 mención “Innovación e Impacto” · $150.000</li>
+                <li class="prize-row"><span class="prize-rank">1°</span><strong>$800.000</strong></li>
+                <li class="prize-row"><span class="prize-rank">2°</span><strong>$600.000</strong></li>
+                <li class="prize-row"><span class="prize-rank">3°</span><strong>$400.000</strong></li>
+                <li class="prize-row"><span class="prize-rank">4°</span><strong>$250.000</strong></li>
               </ul>
+              <div class="prize-mentions">
+                <p><span>2 menciones “Mejor Pitch”</span><strong>$150.000 c/u</strong></p>
+                <p><span>1 mención “Innovación e Impacto”</span><strong>$150.000</strong></p>
+              </div>
             </article>
-            <article class="prize-panel">
-              <h3 class="pill-title pill-title--proto">Categoría Prototipo / emprendimiento</h3>
+            <article class="prize-panel prize-panel--proto">
+              <div class="prize-head">
+                <span class="prize-head-label">Categoría</span>
+                <h3>Prototipo / emprendimiento</h3>
+              </div>
               <ul class="prize-list">
-                <li><span class="prize-rank">1°</span> $2.000.000</li>
-                <li><span class="prize-rank">2°</span> $1.500.000</li>
-                <li><span class="prize-rank">3°</span> $1.000.000</li>
-                <li>2 menciones “Mejor Pitch” · $500.000 c/u</li>
-                <li>1 mención “Innovación e Impacto” · $500.000</li>
+                <li class="prize-row"><span class="prize-rank">1°</span><strong>$2.000.000</strong></li>
+                <li class="prize-row"><span class="prize-rank">2°</span><strong>$1.500.000</strong></li>
+                <li class="prize-row"><span class="prize-rank">3°</span><strong>$1.000.000</strong></li>
               </ul>
+              <div class="prize-mentions">
+                <p><span>2 menciones “Mejor Pitch”</span><strong>$500.000 c/u</strong></p>
+                <p><span>1 mención “Innovación e Impacto”</span><strong>$500.000</strong></p>
+              </div>
             </article>
           </div>
           <p class="bases-link text-center">
             <a
+              class="bases-pill bases-pill--alt"
               href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/01/0030N2025_Bases-Concurso-PITCH_Emprende-con-Impacto-1.pdf"
               target="_blank"
               rel="noreferrer"
               data-track-click="premios_bases_pdf_click"
               data-track-location="premios"
-              >Ver bases oficiales en PDF</a
+              ><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Ver bases oficiales en PDF</a
             >
           </p>
         </div>
@@ -703,8 +734,8 @@
       </div>
     </footer>
 
-    <script src="./ab-test.js?v=3" defer></script>
-    <script src="./analytics.js?v=3" defer></script>
-    <script src="./ui.js?v=3" defer></script>
+    <script src="./ab-test.js?v=4" defer></script>
+    <script src="./analytics.js?v=4" defer></script>
+    <script src="./ui.js?v=4" defer></script>
   </body>
 </html>

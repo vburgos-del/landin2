@@ -40,7 +40,7 @@
   reveals.forEach((el) => revealObserver.observe(el));
 
   const staggerParents = document.querySelectorAll(
-    ".value-grid, .route-grid, .prize-boards, .alliance-grid, .gallery-grid, .testimonial-grid, .stats-grid"
+    ".value-grid, .benefits-grid, .route-grid, .prize-boards, .alliance-grid, .gallery-grid, .testimonial-grid, .stats-grid"
   );
   staggerParents.forEach((grid) => {
     [...grid.children].forEach((child, index) => {
