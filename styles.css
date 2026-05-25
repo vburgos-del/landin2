@@ -55,6 +55,13 @@ a {
   margin: 0 auto;
 }
 
+.container-full {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-inline: clamp(1.25rem, 5vw, 4rem);
+}
+
 .text-center {
   text-align: center;
 }
@@ -421,10 +428,16 @@ a {
   color: transparent;
 }
 
+.section-route .container-full {
+  position: relative;
+  z-index: 1;
+}
+
 .route-journey {
   position: relative;
   margin-top: 8px;
   padding-bottom: 16px;
+  width: 100%;
 }
 
 .route-deco {
@@ -599,7 +612,7 @@ a {
 
   .route-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 4rem 3rem;
+    gap: 4.5rem clamp(2rem, 4vw, 5rem);
   }
 
   .route-node--y1 {
@@ -738,7 +751,8 @@ a {
 }
 
 .section-partners .container,
-.section-faq .container {
+.section-faq .container,
+.section-faq .container-full {
   position: relative;
   z-index: 1;
 }
@@ -848,13 +862,14 @@ a {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  max-width: 48rem;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .faq-item {
   border-bottom: 1px solid #e2e8f0;
-  padding: 0.35rem 0.5rem;
+  padding: 0.5rem clamp(0.75rem, 2vw, 1.25rem);
   transition: background 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out),
     border-radius 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
 }
@@ -1539,7 +1554,8 @@ a {
   animation-delay: 2s;
 }
 
-.section-winners-modern .container {
+.section-winners-modern .container,
+.section-winners-modern .container-full {
   position: relative;
   z-index: 1;
 }
@@ -1565,11 +1581,16 @@ a {
   margin-top: 4rem;
 }
 
+.winners-block {
+  width: 100%;
+}
+
 .winners-category-head {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  width: 100%;
   margin-bottom: 2.5rem;
 }
 
@@ -1582,7 +1603,9 @@ a {
 }
 
 .winners-category-line {
-  width: 3rem;
+  flex: 1;
+  min-width: 2rem;
+  max-width: 14rem;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--purple));
 }
@@ -1598,8 +1621,9 @@ a {
 }
 
 .winners-grid--3 {
-  max-width: 64rem;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .winner-card {
@@ -1780,6 +1804,12 @@ a {
 
   .winners-grid--3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .winners-grid {
+    gap: clamp(1.5rem, 2.5vw, 2.5rem);
   }
 }
 
@@ -2078,11 +2108,16 @@ a {
   text-align: center;
 }
 
+.section-final-cta-modern .container-full {
+  width: 100%;
+}
+
 .final-cta-inner {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 2.2rem;
-  border-radius: 2rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem);
+  border-radius: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.8);
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0 20px 40px rgba(30, 41, 59, 0.1);
@@ -2098,23 +2133,34 @@ a {
 
 .final-cta p {
   margin: 0 auto 16px;
-  max-width: 580px;
+  max-width: 52rem;
   color: #475569;
+}
+
+.section-form-modern .container-full {
+  width: 100%;
 }
 
 .section-form-modern .form-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  align-items: start;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: stretch;
+  width: 100%;
 }
 
 .section-form-modern .form-layout > div {
   border-radius: 1.4rem;
-  padding: 1.4rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.82);
   box-shadow: 0 12px 26px rgba(30, 41, 59, 0.08);
+}
+
+.section-form-modern .form-layout > div .section-intro {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
 }
 
 .contact-form {
