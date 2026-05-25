@@ -125,4 +125,35 @@
     );
     ctaObserver.observe(postula);
   }
+
+  const faqItems = document.querySelectorAll(".faq-item");
+  const setFaqOpen = (item, open) => {
+    const button = item.querySelector(".faq-item__button");
+    const content = item.querySelector(".faq-item__content");
+    if (!button || !content) return;
+
+    button.setAttribute("aria-expanded", open ? "true" : "false");
+    content.classList.toggle("is-open", open);
+    item.classList.toggle("is-active", open);
+  };
+
+  faqItems.forEach((item) => {
+    const button = item.querySelector(".faq-item__button");
+    if (!button) return;
+
+    button.addEventListener("click", () => {
+      const isOpen = item.classList.contains("is-active");
+
+      faqItems.forEach((other) => setFaqOpen(other, false));
+
+      if (!isOpen) {
+        setFaqOpen(item, true);
+        const faqId = item.dataset.trackFaq;
+        if (faqId && window.PitchAnalytics?.trackFAQ) {
+          window.PitchAnalytics.trackFAQ(faqId);
+        }
+      }
+    });
+  });
+
 })();

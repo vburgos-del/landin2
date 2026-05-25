@@ -129,11 +129,7 @@
   );
   document.querySelectorAll("[data-track-view]").forEach((s) => viewObserver.observe(s));
 
-  document.querySelectorAll("[data-track-faq]").forEach((item) => {
-    item.addEventListener("toggle", () => {
-      if (item.open) trackFAQ(item.dataset.trackFaq);
-    });
-  });
+  /* FAQ tracking handled in ui.js (accordion) */
 
   const form = document.querySelector("[data-track-form]");
   if (form) {

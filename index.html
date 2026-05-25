@@ -150,27 +150,12 @@
 
       <section class="section section-route reveal" id="como-funciona" data-track-view="timeline_view">
         <div class="container">
-          <h2 class="text-center route-title">Tu camino en Pitch UChile</h2>
+          <h2 class="text-center">Tu camino en Pitch UChile</h2>
           <p class="section-intro text-center">
             Cronograma oficial de la convocatoria (bases 2025). Las fechas pueden actualizarse con aviso previo.
           </p>
 
           <div class="route-journey">
-            <div class="route-deco" aria-hidden="true">
-              <span class="route-blob route-blob--blue"></span>
-              <span class="route-blob route-blob--purple"></span>
-            </div>
-
-            <svg class="route-path" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 1000 1000">
-              <path
-                d="M 500 0 C 700 200, 300 400, 500 600 C 700 800, 300 900, 500 1000"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-                stroke-dasharray="12 12"
-              />
-            </svg>
-
             <div class="route-grid">
               <article class="route-node route-node--y1 reveal">
                 <span class="route-node__bg-num" aria-hidden="true">1</span>
@@ -457,20 +442,20 @@
             Instituciones que impulsan el ecosistema de innovación y emprendimiento en esta edición.
           </p>
           <div class="alliance-grid" aria-label="Organizaciones aliadas">
-            <article class="alliance-card alliance-card--featured">
+            <article class="alliance-card reveal">
               <span class="alliance-mark alliance-mark--sx" aria-hidden="true">SX</span>
               <p class="alliance-name">Santander X</p>
             </article>
-            <article class="alliance-card">
+            <article class="alliance-card reveal">
               <span class="alliance-mark alliance-mark--ob" aria-hidden="true">OB</span>
               <p class="alliance-name">Open Beauchef</p>
             </article>
-            <article class="alliance-card">
+            <article class="alliance-card reveal">
               <span class="alliance-mark alliance-mark--oi" aria-hidden="true">OI</span>
               <p class="alliance-name">OpenICS</p>
               <p class="alliance-tagline">Innovación en ciencias de la salud</p>
             </article>
-            <article class="alliance-card">
+            <article class="alliance-card reveal">
               <span class="alliance-mark alliance-mark--uch" aria-hidden="true">U</span>
               <p class="alliance-name">Programa Ciencia 2030</p>
               <p class="alliance-tagline">Universidad de Chile</p>
@@ -482,37 +467,87 @@
       <section class="section section-light reveal" id="faq">
         <div class="container">
           <h2 class="text-center">Preguntas frecuentes</h2>
-          <div class="faq-list">
-            <details data-track-faq="faq_eligibilidad">
-              <summary>¿Quiénes pueden postular?</summary>
-              <p>
-                Estudiantes y egresados de pregrado o postgrado de la Universidad de Chile
-                con proyectos en ideación o emprendimiento temprano.
-              </p>
-            </details>
-            <details data-track-faq="faq_equipo">
-              <summary>¿Puedo postular solo o en equipo?</summary>
-              <p>Puedes postular de forma individual o con equipo.</p>
-            </details>
-            <details data-track-faq="faq_empresa">
-              <summary>¿Necesito tener empresa constituida?</summary>
-              <p>No. Puedes participar desde idea o prototipo, sin formalización.</p>
-            </details>
-            <details data-track-faq="faq_tiempo">
-              <summary>¿Cuánto tiempo debo dedicar?</summary>
-              <p>
-                Considera disponibilidad para formación, mentorías y preparación del pitch
-                según la etapa del concurso.
-              </p>
-            </details>
-            <details data-track-faq="faq_categorias">
-              <summary>¿Cuáles son las categorías?</summary>
-              <p>
-                <strong>Ideación:</strong> idea, prueba de concepto o prototipo inicial sin
-                ventas. <strong>Prototipo/emprendimiento:</strong> prototipo testeado o producto
-                en mercado con menos de 3 años.
-              </p>
-            </details>
+          <p class="section-intro text-center">
+            Resolvemos las dudas más comunes sobre postulación, equipo y categorías.
+          </p>
+          <div class="faq-accordion">
+            <article class="faq-item is-active" data-track-faq="faq_eligibilidad">
+              <button class="faq-item__button" type="button" aria-expanded="true">
+                <span class="faq-item__question">¿Quiénes pueden postular?</span>
+                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+              </button>
+              <div class="faq-item__content is-open">
+                <div class="faq-item__inner">
+                  <p>
+                    Estudiantes y egresados de pregrado o postgrado de la Universidad de Chile
+                    con proyectos en ideación o emprendimiento temprano.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item" data-track-faq="faq_equipo">
+              <button class="faq-item__button" type="button" aria-expanded="false">
+                <span class="faq-item__question">¿Puedo postular solo o en equipo?</span>
+                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+              </button>
+              <div class="faq-item__content">
+                <div class="faq-item__inner">
+                  <p>
+                    Puedes postular de forma individual o con equipo. Recomendamos la formación
+                    de equipos multidisciplinarios para enriquecer la propuesta.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item" data-track-faq="faq_empresa">
+              <button class="faq-item__button" type="button" aria-expanded="false">
+                <span class="faq-item__question">¿Necesito tener empresa constituida?</span>
+                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+              </button>
+              <div class="faq-item__content">
+                <div class="faq-item__inner">
+                  <p>
+                    No es necesario. El programa está diseñado para apoyar tanto ideas en fase
+                    inicial (ideación) como proyectos que ya han comenzado su desarrollo, sin
+                    requerir constitución legal previa.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item" data-track-faq="faq_tiempo">
+              <button class="faq-item__button" type="button" aria-expanded="false">
+                <span class="faq-item__question">¿Cuánto tiempo debo dedicar?</span>
+                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+              </button>
+              <div class="faq-item__content">
+                <div class="faq-item__inner">
+                  <p>
+                    Se espera una participación activa en los talleres formativos y actividades
+                    de preselección, lo que equivale a un compromiso estimado de 4 a 6 horas
+                    semanales durante las etapas clave.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="faq-item" data-track-faq="faq_categorias">
+              <button class="faq-item__button" type="button" aria-expanded="false">
+                <span class="faq-item__question">¿Cuáles son las categorías?</span>
+                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+              </button>
+              <div class="faq-item__content">
+                <div class="faq-item__inner">
+                  <p>
+                    <strong>Ideación:</strong> idea, prueba de concepto o prototipo inicial sin
+                    ventas. <strong>Prototipo/emprendimiento:</strong> prototipo testeado o
+                    producto en mercado con menos de 3 años.
+                  </p>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
