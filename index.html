@@ -150,12 +150,27 @@
 
       <section class="section section-route reveal" id="como-funciona" data-track-view="timeline_view">
         <div class="container">
-          <h2 class="text-center">Tu camino en Pitch UChile</h2>
+          <h2 class="text-center route-title">Tu camino en Pitch UChile</h2>
           <p class="section-intro text-center">
             Cronograma oficial de la convocatoria (bases 2025). Las fechas pueden actualizarse con aviso previo.
           </p>
 
           <div class="route-journey">
+            <div class="route-deco" aria-hidden="true">
+              <span class="route-blob route-blob--blue"></span>
+              <span class="route-blob route-blob--purple"></span>
+            </div>
+
+            <svg class="route-path" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 1000 1000">
+              <path
+                d="M 500 0 C 700 200, 300 400, 500 600 C 700 800, 300 900, 500 1000"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-dasharray="12 12"
+              />
+            </svg>
+
             <div class="route-grid">
               <article class="route-node route-node--y1 reveal">
                 <span class="route-node__bg-num" aria-hidden="true">1</span>
@@ -435,9 +450,13 @@
         </div>
       </section>
 
-      <section class="section section-light reveal" id="alianzas">
+      <section class="section section-partners reveal" id="alianzas">
+        <div class="partners-deco" aria-hidden="true">
+          <span class="partners-blob partners-blob--blue"></span>
+          <span class="partners-blob partners-blob--purple"></span>
+        </div>
         <div class="container">
-          <h2 class="text-center">Alianzas</h2>
+          <h2 class="text-center partners-title">Alianzas</h2>
           <p class="section-intro text-center">
             Instituciones que impulsan el ecosistema de innovación y emprendimiento en esta edición.
           </p>
@@ -464,12 +483,9 @@
         </div>
       </section>
 
-      <section class="section section-light reveal" id="faq">
+      <section class="section section-faq reveal" id="faq">
         <div class="container">
-          <h2 class="text-center">Preguntas frecuentes</h2>
-          <p class="section-intro text-center">
-            Resolvemos las dudas más comunes sobre postulación, equipo y categorías.
-          </p>
+          <h2 class="text-center faq-title">Preguntas frecuentes</h2>
           <div class="faq-accordion">
             <article class="faq-item is-active" data-track-faq="faq_eligibilidad">
               <button class="faq-item__button" type="button" aria-expanded="true">
