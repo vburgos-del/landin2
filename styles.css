@@ -349,83 +349,232 @@ a {
 .value-card h3,
 .stage-card h3,
 .benefit-card h3,
-.timeline-step h3,
 .testimonial-card h3 {
   color: var(--blue);
   margin-bottom: 8px;
 }
 
-/* Timeline */
-.timeline {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  position: relative;
+/* Route journey (cronograma) */
+.section-route {
+  background-color: #f8fafc;
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 40px 40px;
+  overflow: hidden;
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 28px;
-  left: 8%;
-  right: 8%;
-  height: 3px;
+.route-title {
+  font-size: clamp(2rem, 4.5vw, 3rem);
   background: linear-gradient(90deg, var(--blue), var(--purple));
-  opacity: 0.2;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.route-journey {
+  position: relative;
+  margin-top: 8px;
+  padding-bottom: 16px;
+}
+
+.route-deco {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
   z-index: 0;
 }
 
-.timeline-step {
+.route-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(64px);
+  opacity: 0.2;
+  animation: routeBlobPulse 6s ease-in-out infinite;
+}
+
+.route-blob--blue {
+  top: -10rem;
+  right: -8rem;
+  width: 24rem;
+  height: 24rem;
+  background: #60a5fa;
+}
+
+.route-blob--purple {
+  top: 8rem;
+  left: -5rem;
+  width: 18rem;
+  height: 18rem;
+  background: #a78bfa;
+  animation-delay: 2s;
+}
+
+@keyframes routeBlobPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.18;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.24;
+  }
+}
+
+.route-path {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: 0;
+  color: var(--purple);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.route-grid {
   position: relative;
   z-index: 1;
-  border: 1px solid var(--border);
-  background: #fff;
-  border-radius: 14px;
-  padding: 16px;
+  display: grid;
+  gap: 3rem 2rem;
+  grid-template-columns: 1fr;
 }
 
-.step-number {
-  display: inline-grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
+.route-node {
+  position: relative;
+}
+
+.route-node__bg-num {
+  position: absolute;
+  top: -2.5rem;
+  left: -0.75rem;
+  font-size: clamp(6rem, 14vw, 12rem);
   font-weight: 800;
-  margin-bottom: 10px;
-  background: var(--blue);
-  color: #fff;
+  line-height: 1;
+  color: rgba(66, 2, 119, 0.04);
+  z-index: 0;
+  pointer-events: none;
+  transition: color 0.3s var(--ease-out), transform 0.3s var(--ease-out);
 }
 
-.section-route {
-  background: linear-gradient(180deg, #fff 0%, var(--light) 100%);
+.route-node__body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.3s var(--ease-out);
 }
 
-.timeline--route .timeline-step {
-  box-shadow: 0 12px 28px rgba(0, 48, 135, 0.08);
-}
-
-.timeline-step--highlight {
-  border-color: rgba(255, 206, 0, 0.55);
-  background: linear-gradient(180deg, #fffef8 0%, #fff 100%);
-}
-
-.step-icon {
+.route-node__icon {
+  flex-shrink: 0;
   display: inline-grid;
   place-items: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  margin-bottom: 8px;
-  background: linear-gradient(135deg, var(--purple-soft), var(--blue));
-  color: #fff;
-  font-size: 0.85rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--blue);
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 48, 135, 0.06);
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background 0.35s var(--ease-out), color 0.35s var(--ease-out),
+    box-shadow 0.35s var(--ease-out);
 }
 
-.step-date {
-  font-size: 0.82rem;
+.route-node__copy {
+  padding-top: 0.35rem;
+}
+
+.route-node__date {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
   font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--purple);
-  margin-bottom: 6px;
+}
+
+.route-node__copy h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.route-node__copy p:last-child {
+  margin: 0;
+  color: #475569;
+  line-height: 1.55;
+}
+
+.route-node:hover .route-node__bg-num {
+  color: rgba(66, 2, 119, 0.09);
+  transform: scale(1.04) translate(6px, -6px);
+}
+
+.route-node:hover .route-node__icon {
+  transform: scale(1.08) rotate(4deg);
+  background: var(--purple);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(66, 2, 119, 0.35);
+}
+
+.route-node--finale .route-node__icon {
+  border: none;
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(0, 48, 135, 0.28);
+}
+
+.route-node--finale:hover .route-node__icon {
+  background: linear-gradient(135deg, var(--purple-soft), var(--purple));
+}
+
+@media (min-width: 768px) {
+  .route-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3.5rem 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .route-path {
+    display: block;
+  }
+
+  .route-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4rem 3rem;
+  }
+
+  .route-node--y1 {
+    transform: translateY(3rem);
+  }
+
+  .route-node--y2 {
+    transform: translateY(-2rem);
+  }
+
+  .route-node--y3 {
+    transform: translateY(5rem);
+  }
+
+  .route-node--y4 {
+    transform: translateY(-1rem);
+  }
+
+  .route-node--y5 {
+    transform: translateY(4rem);
+  }
+
+  .route-node--y6 {
+    transform: translateY(1rem);
+  }
 }
 
 .section-premios {
@@ -1002,21 +1151,12 @@ a {
 }
 
 @media (max-width: 1080px) {
-  .timeline,
-  .timeline--route {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .prize-boards {
     grid-template-columns: 1fr;
   }
 
   .alliance-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .timeline::before {
-    display: none;
   }
 
   .value-grid {
@@ -1059,7 +1199,6 @@ a {
   }
 
   .value-grid,
-  .timeline,
   .testimonial-grid,
   .stats-grid,
   .stage-grid,
@@ -1119,7 +1258,13 @@ a {
   .btn:hover,
   .value-card:hover,
   .person-card:hover,
-  .alliance-card:hover {
+  .alliance-card:hover,
+  .route-node:hover .route-node__icon,
+  .route-node:hover .route-node__bg-num {
     transform: none;
+  }
+
+  .route-blob {
+    animation: none;
   }
 }
