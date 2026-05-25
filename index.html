@@ -20,18 +20,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles.css?v=6" />
-    <script src="./analytics.config.js?v=6"></script>
+    <link rel="stylesheet" href="./styles.css?v=7" />
+    <script src="./analytics.config.js?v=7"></script>
   </head>
   <body>
     <nav class="top-nav" aria-label="Secciones principales">
       <div class="container top-nav-inner">
         <a href="#inicio">Inicio</a>
         <a href="#por-que-postular">Beneficios</a>
-        <a href="#como-funciona">Proceso</a>
         <a href="#premios-detalle">Premios</a>
-        <a href="#alianzas">Alianzas</a>
-        <a href="#video">Experiencia</a>
+        <a href="#como-funciona">Proceso</a>
+        <a href="#casos">Ganadores</a>
+        <a href="#faq">FAQ</a>
         <a href="#postula" class="top-nav-cta">Postula</a>
       </div>
     </nav>
@@ -97,14 +97,6 @@
             data-track-location="hero"
             >Postula aquí</a
           >
-          <a
-            class="btn btn-secondary"
-            href="#como-funciona"
-            data-ab-cta-secondary
-            data-track-click="hero_como_funciona_click"
-            data-track-location="hero"
-            >Conoce cómo funciona</a
-          >
         </div>
         <p class="scroll-hint" aria-hidden="true">
           <span>Explorar</span>
@@ -117,316 +109,54 @@
     <main>
       <section class="section section-intro-modern reveal" id="por-que-postular">
         <div class="container">
-          <h2 class="text-center">Más que un concurso, una experiencia de emprendimiento</h2>
+          <h2 class="text-center">Por qué postular</h2>
           <p class="section-intro text-center">
-            Si tienes una idea que puede generar impacto, este es el espacio para
-            validarla, fortalecerla y presentarla ante expertos.
+            Una ruta concreta para pasar de idea a proyecto con apoyo real y visibilidad.
           </p>
-
-          <div class="value-grid">
+          <div class="value-grid value-grid--3">
             <article class="value-card">
               <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
-              <h3>Formación práctica</h3>
-              <p>Bootcamp intensivo para fortalecer propuesta de valor y modelo de negocio.</p>
+              <h3>Formación aplicada</h3>
+              <p>Bootcamp y mentorías para aterrizar propuesta de valor y modelo de negocio.</p>
             </article>
             <article class="value-card">
               <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></span>
-              <h3>Mentorías y red</h3>
-              <p>Conecta con jurados, emprendedores y aliados del ecosistema emprendedor.</p>
+              <h3>Red y conexiones</h3>
+              <p>Conecta con jurados, aliados y actores del ecosistema emprendedor.</p>
             </article>
             <article class="value-card">
-              <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-microphone"></i></span>
-              <h3>Visibilidad real</h3>
-              <p>Presenta en semifinal y DemoDay frente a audiencia especializada.</p>
-            </article>
-            <article class="value-card">
-              <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-coins"></i></span>
-              <h3>Apoyo económico</h3>
-              <p>Premios y equipamiento para ejecutar hitos estratégicos de tu iniciativa.</p>
+              <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-trophy"></i></span>
+              <h3>Visibilidad y premios</h3>
+              <p>Presenta en la final y compite por financiamiento para impulsar tu proyecto.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section section-route reveal" id="como-funciona" data-track-view="timeline_view">
-        <div class="container-full">
-          <h2 class="text-center route-title">Tu camino en Pitch UChile</h2>
-          <p class="section-intro text-center">
-            Cronograma oficial de la convocatoria (bases 2025). Las fechas pueden actualizarse con aviso previo.
-          </p>
-
-          <div class="route-journey">
-            <div class="route-deco" aria-hidden="true">
-              <span class="route-blob route-blob--blue"></span>
-              <span class="route-blob route-blob--purple"></span>
-            </div>
-
-            <svg class="route-path" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 1000 1000">
-              <path
-                d="M 500 0 C 700 200, 300 400, 500 600 C 700 800, 300 900, 500 1000"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-                stroke-dasharray="12 12"
-              />
-            </svg>
-
-            <div class="route-grid">
-              <article class="route-node route-node--y1 reveal">
-                <span class="route-node__bg-num" aria-hidden="true">1</span>
-                <div class="route-node__body">
-                  <span class="route-node__icon" aria-hidden="true"
-                    ><i class="fa-solid fa-file-lines"></i
-                  ></span>
-                  <div class="route-node__copy">
-                    <p class="route-node__date">10 Mar – 6 Abr 2025</p>
-                    <h3>Postulación inicial</h3>
-                    <p>Envías tu idea o emprendimiento con foco en impacto.</p>
-                  </div>
-                </div>
+      <section class="section section-countdown reveal" id="contador-final">
+        <div class="container">
+          <div class="countdown-card">
+            <p class="countdown-kicker">Final Pitch UChile</p>
+            <h2 class="countdown-title">1 de noviembre 2026</h2>
+            <div class="countdown-grid" data-final-date="2026-11-01T00:00:00-03:00">
+              <article class="countdown-item">
+                <strong data-countdown="days">0</strong>
+                <span>Dias</span>
               </article>
-
-              <article class="route-node route-node--y2 reveal">
-                <span class="route-node__bg-num" aria-hidden="true">2</span>
-                <div class="route-node__body">
-                  <span class="route-node__icon" aria-hidden="true"
-                    ><i class="fa-solid fa-magnifying-glass"></i
-                  ></span>
-                  <div class="route-node__copy">
-                    <p class="route-node__date">7 – 16 Abr 2025</p>
-                    <h3>Evaluación etapa 1</h3>
-                    <p>Revisión de antecedentes y preselección de proyectos.</p>
-                  </div>
-                </div>
+              <article class="countdown-item">
+                <strong data-countdown="hours">0</strong>
+                <span>Horas</span>
               </article>
-
-              <article class="route-node route-node--y3 reveal">
-                <span class="route-node__bg-num" aria-hidden="true">3</span>
-                <div class="route-node__body">
-                  <span class="route-node__icon" aria-hidden="true"
-                    ><i class="fa-solid fa-bullhorn"></i
-                  ></span>
-                  <div class="route-node__copy">
-                    <p class="route-node__date">17 Abr 2025</p>
-                    <h3>Preseleccionados</h3>
-                    <p>Comunicación oficial para avanzar a la etapa formativa.</p>
-                  </div>
-                </div>
+              <article class="countdown-item">
+                <strong data-countdown="minutes">0</strong>
+                <span>Minutos</span>
               </article>
-
-              <article class="route-node route-node--y4 reveal">
-                <span class="route-node__bg-num" aria-hidden="true">4</span>
-                <div class="route-node__body">
-                  <span class="route-node__icon" aria-hidden="true"
-                    ><i class="fa-solid fa-video"></i
-                  ></span>
-                  <div class="route-node__copy">
-                    <p class="route-node__date">17 – 27 Abr 2025</p>
-                    <h3>Taller + Video Pitch</h3>
-                    <p>Formación en pitch y entrega de video (máx. 2 min).</p>
-                  </div>
-                </div>
-              </article>
-
-              <article class="route-node route-node--y5 reveal">
-                <span class="route-node__bg-num" aria-hidden="true">5</span>
-                <div class="route-node__body">
-                  <span class="route-node__icon" aria-hidden="true"
-                    ><i class="fa-solid fa-star"></i
-                  ></span>
-                  <div class="route-node__copy">
-                    <p class="route-node__date">11 May 2025</p>
-                    <h3>Semifinalistas y finalistas</h3>
-                    <p>Proyectos seleccionados para la etapa final del concurso.</p>
-                  </div>
-                </div>
-              </article>
-
-              <article class="route-node route-node--y6 route-node--finale reveal">
-                <span class="route-node__bg-num" aria-hidden="true">6</span>
-                <div class="route-node__body">
-                  <span class="route-node__icon" aria-hidden="true"
-                    ><i class="fa-solid fa-microphone-lines"></i
-                  ></span>
-                  <div class="route-node__copy">
-                    <p class="route-node__date">3 Jun 2025</p>
-                    <h3>Pitch final + DemoDay</h3>
-                    <p>Presentación en escenario, visibilidad y premiación.</p>
-                  </div>
-                </div>
+              <article class="countdown-item">
+                <strong data-countdown="seconds">0</strong>
+                <span>Segundos</span>
               </article>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section cta-band">
-        <div class="container cta-band-inner">
-          <div>
-            <h2>No necesitas tener todo resuelto, solo partir.</h2>
-            <p>Aprende, conecta y presenta tu proyecto ante una red que impulsa.</p>
-          </div>
-          <a
-            class="btn btn-primary"
-            href="#postula"
-            data-track-click="mid_cta_click"
-            data-track-location="mid_page"
-            >Postula ahora</a
-          >
-        </div>
-      </section>
-
-      <section class="section section-stats reveal" id="social-proof">
-        <div class="container">
-          <h2 class="text-center light-heading">Quienes ya lo vivieron</h2>
-          <div class="testimonial-grid" data-track-view="testimonials_view">
-            <article class="testimonial-card">
-              <h3>Felipe Salgado · Lagrimark</h3>
-              <p class="before-after">Antes: idea en fase temprana</p>
-              <p class="before-after">Después: validación y visibilidad institucional</p>
-              <blockquote>
-                Pitch UChile me ayudó a estructurar mejor la propuesta y avanzar con una
-                mirada más estratégica.
-              </blockquote>
-            </article>
-            <article class="testimonial-card">
-              <h3>Tomas Jackson · Quickron</h3>
-              <p class="before-after">Antes: prototipo inicial</p>
-              <p class="before-after">Después: feedback experto y mejor pitch</p>
-              <blockquote>
-                El proceso me obligó a aterrizar el valor del proyecto y comunicarlo con
-                mayor claridad.
-              </blockquote>
-            </article>
-            <article class="testimonial-card">
-              <h3>Andrés Gallardo · ANN Sense</h3>
-              <p class="before-after">Antes: solución técnica en desarrollo</p>
-              <p class="before-after">Después: narrativa de impacto y nuevas redes</p>
-              <blockquote>
-                No solo fue competir; fue aprender de mentores y conectar con personas
-                clave para escalar.
-              </blockquote>
-            </article>
-          </div>
-
-          <div class="stats-grid" data-track-view="stats_view">
-            <article class="stat">
-              <span class="stat-icon" aria-hidden="true"><i class="fa-solid fa-pen-to-square"></i></span>
-              <p class="number" data-target="250">+0</p>
-              <p>Postulaciones</p>
-            </article>
-            <article class="stat">
-              <span class="stat-icon" aria-hidden="true"><i class="fa-solid fa-users"></i></span>
-              <p class="number" data-target="400">+0</p>
-              <p>Postulantes</p>
-            </article>
-            <article class="stat">
-              <span class="stat-icon" aria-hidden="true"><i class="fa-solid fa-trophy"></i></span>
-              <p class="number money" data-target="10000000">+0</p>
-              <p>En premios de formación, mentorías y equipamiento tecnológico</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-video-modern reveal" id="video">
-        <div class="container">
-          <h2 class="text-center">Así se vivió Pitch UChile 2025</h2>
-          <p class="section-intro text-center">
-            De la idea al escenario: conoce la experiencia completa de quienes participaron.
-          </p>
-          <div class="video-wrapper" data-track-view="recap_video_view">
-            <iframe
-              src="https://www.youtube.com/embed/-StRyxGgH3o"
-              title="Concurso Pitch UChile Emprende con impacto 2025"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-stage-modern reveal" id="etapas-proyecto">
-        <div class="container">
-          <h2 class="text-center">Este concurso es para ti si estás en esta etapa</h2>
-          <div class="stage-grid">
-            <article class="stage-card">
-              <span class="stage-emoji" aria-hidden="true">💡</span>
-              <h3>Tienes una idea</h3>
-              <p>Te ayudamos a estructurarla, validarla y convertirla en proyecto.</p>
-            </article>
-            <article class="stage-card">
-              <span class="stage-emoji" aria-hidden="true">🛠</span>
-              <h3>Tienes un prototipo</h3>
-              <p>Fortaleces tu propuesta y modelo para acercarte al mercado.</p>
-            </article>
-            <article class="stage-card">
-              <span class="stage-emoji" aria-hidden="true">🚀</span>
-              <h3>Ya estás avanzando</h3>
-              <p>Ganas visibilidad, conexiones y herramientas para escalar.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-benefits-modern reveal" id="beneficios">
-        <div class="benefits-deco" aria-hidden="true">
-          <span class="benefits-blob benefits-blob--blue"></span>
-          <span class="benefits-blob benefits-blob--purple"></span>
-        </div>
-        <div class="container">
-          <h2 class="text-center benefits-title">Lo que obtendrás</h2>
-          <p class="section-intro text-center">
-            Más allá del capital, una experiencia integral para potenciar tu impacto.
-          </p>
-          <div class="benefits-grid">
-            <article class="benefit-card benefit-card--finance">
-              <span class="benefit-icon-blob" aria-hidden="true"></span>
-              <div class="benefit-icon-wrap">
-                <span class="benefit-icon" aria-hidden="true"><i class="fa-solid fa-sack-dollar"></i></span>
-              </div>
-              <h3>Financiamiento</h3>
-              <ul class="benefit-list">
-                <li><i class="fa-solid fa-check"></i><span><strong>Ideación:</strong> hasta $800.000 (1° lugar)</span></li>
-                <li><i class="fa-solid fa-check"></i><span><strong>Prototipo:</strong> hasta $2.000.000 (1° lugar)</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Menciones “Mejor Pitch” e “Innovación e impacto”</span></li>
-              </ul>
-            </article>
-            <article class="benefit-card benefit-card--training">
-              <span class="benefit-icon-blob" aria-hidden="true"></span>
-              <div class="benefit-icon-wrap">
-                <span class="benefit-icon" aria-hidden="true"><i class="fa-solid fa-chalkboard-user"></i></span>
-              </div>
-              <h3>Formación</h3>
-              <ul class="benefit-list">
-                <li><i class="fa-solid fa-check"></i><span>Bootcamp intensivo con foco en ejecución</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Mentorías y acompañamiento estratégico</span></li>
-              </ul>
-            </article>
-            <article class="benefit-card benefit-card--network">
-              <span class="benefit-icon-blob" aria-hidden="true"></span>
-              <div class="benefit-icon-wrap">
-                <span class="benefit-icon" aria-hidden="true"><i class="fa-solid fa-globe"></i></span>
-              </div>
-              <h3>Redes y visibilidad</h3>
-              <ul class="benefit-list">
-                <li><i class="fa-solid fa-check"></i><span>Exposición frente a jurado y comunidad</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Difusión y conexiones con el ecosistema</span></li>
-              </ul>
-            </article>
-          </div>
-          <p class="bases-link text-center">
-            <a
-              class="bases-pill"
-              href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/01/0030N2025_Bases-Concurso-PITCH_Emprende-con-Impacto-1.pdf"
-              target="_blank"
-              rel="noreferrer"
-              data-track-click="bases_legales_click"
-              data-track-location="beneficios"
-              ><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Infórmate de las bases legales 2025 (PDF)</a
-            >
-          </p>
         </div>
       </section>
 
@@ -434,38 +164,35 @@
         <div class="container">
           <h2 class="text-center premios-title">Premios</h2>
           <p class="section-intro text-center premios-total">
-            Fondo total de <strong>$8.500.000</strong> según bases y condiciones generales del concurso.
+            Fondo total de <strong>$8.500.000</strong> para impulsar proyectos en ideacion y prototipo.
           </p>
           <div class="prize-boards">
             <article class="prize-panel prize-panel--idea">
               <div class="prize-head">
-                <span class="prize-head-label">Categoría</span>
-                <h3>Idea</h3>
+                <span class="prize-head-label">Categoria</span>
+                <h3>Ideacion</h3>
               </div>
               <ul class="prize-list">
-                <li class="prize-row"><span class="prize-rank">1°</span><strong>$800.000</strong></li>
-                <li class="prize-row"><span class="prize-rank">2°</span><strong>$600.000</strong></li>
-                <li class="prize-row"><span class="prize-rank">3°</span><strong>$400.000</strong></li>
-                <li class="prize-row"><span class="prize-rank">4°</span><strong>$250.000</strong></li>
+                <li class="prize-row"><span class="prize-rank">1</span><strong>$800.000</strong></li>
+                <li class="prize-row"><span class="prize-rank">2</span><strong>$600.000</strong></li>
+                <li class="prize-row"><span class="prize-rank">3</span><strong>$400.000</strong></li>
               </ul>
               <div class="prize-mentions">
-                <p><span>2 menciones “Mejor Pitch”</span><strong>$150.000 c/u</strong></p>
-                <p><span>1 mención “Innovación e Impacto”</span><strong>$150.000</strong></p>
+                <p><span>Menciones especiales</span><strong>$150.000</strong></p>
               </div>
             </article>
             <article class="prize-panel prize-panel--proto">
               <div class="prize-head">
-                <span class="prize-head-label">Categoría</span>
+                <span class="prize-head-label">Categoria</span>
                 <h3>Prototipo / emprendimiento</h3>
               </div>
               <ul class="prize-list">
-                <li class="prize-row"><span class="prize-rank">1°</span><strong>$2.000.000</strong></li>
-                <li class="prize-row"><span class="prize-rank">2°</span><strong>$1.500.000</strong></li>
-                <li class="prize-row"><span class="prize-rank">3°</span><strong>$1.000.000</strong></li>
+                <li class="prize-row"><span class="prize-rank">1</span><strong>$2.000.000</strong></li>
+                <li class="prize-row"><span class="prize-rank">2</span><strong>$1.500.000</strong></li>
+                <li class="prize-row"><span class="prize-rank">3</span><strong>$1.000.000</strong></li>
               </ul>
               <div class="prize-mentions">
-                <p><span>2 menciones “Mejor Pitch”</span><strong>$500.000 c/u</strong></p>
-                <p><span>1 mención “Innovación e Impacto”</span><strong>$500.000</strong></p>
+                <p><span>Menciones especiales</span><strong>$500.000</strong></p>
               </div>
             </article>
           </div>
@@ -483,120 +210,72 @@
         </div>
       </section>
 
-      <section class="section section-partners reveal" id="alianzas">
-        <div class="partners-deco" aria-hidden="true">
-          <span class="partners-blob partners-blob--blue"></span>
-          <span class="partners-blob partners-blob--purple"></span>
-        </div>
-        <div class="container">
-          <h2 class="text-center partners-title">Alianzas</h2>
-          <p class="section-intro text-center">
-            Instituciones que impulsan el ecosistema de innovación y emprendimiento en esta edición.
-          </p>
-          <div class="alliance-grid" aria-label="Organizaciones aliadas">
-            <article class="alliance-card reveal">
-              <span class="alliance-mark alliance-mark--sx" aria-hidden="true">SX</span>
-              <p class="alliance-name">Santander X</p>
-            </article>
-            <article class="alliance-card reveal">
-              <span class="alliance-mark alliance-mark--ob" aria-hidden="true">OB</span>
-              <p class="alliance-name">Open Beauchef</p>
-            </article>
-            <article class="alliance-card reveal">
-              <span class="alliance-mark alliance-mark--oi" aria-hidden="true">OI</span>
-              <p class="alliance-name">OpenICS</p>
-              <p class="alliance-tagline">Innovación en ciencias de la salud</p>
-            </article>
-            <article class="alliance-card reveal">
-              <span class="alliance-mark alliance-mark--uch" aria-hidden="true">U</span>
-              <p class="alliance-name">Programa Ciencia 2030</p>
-              <p class="alliance-tagline">Universidad de Chile</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-faq reveal" id="faq">
+      <section class="section section-route reveal" id="como-funciona" data-track-view="timeline_view">
         <div class="container-full">
-          <h2 class="text-center faq-title">Preguntas frecuentes</h2>
-          <div class="faq-accordion">
-            <article class="faq-item is-active" data-track-faq="faq_eligibilidad">
-              <button class="faq-item__button" type="button" aria-expanded="true">
-                <span class="faq-item__question">¿Quiénes pueden postular?</span>
-                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
-              </button>
-              <div class="faq-item__content is-open">
-                <div class="faq-item__inner">
-                  <p>
-                    Estudiantes y egresados de pregrado o postgrado de la Universidad de Chile
-                    con proyectos en ideación o emprendimiento temprano.
-                  </p>
+          <h2 class="text-center route-title">Como funciona</h2>
+          <p class="section-intro text-center">
+            Proceso resumido para postular, avanzar y presentar tu proyecto en la final.
+          </p>
+          <div class="route-journey">
+            <div class="route-deco" aria-hidden="true">
+              <span class="route-blob route-blob--blue"></span>
+              <span class="route-blob route-blob--purple"></span>
+            </div>
+            <svg class="route-path" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 1000 1000">
+              <path
+                d="M 500 0 C 700 200, 300 400, 500 600 C 700 800, 300 900, 500 1000"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-dasharray="12 12"
+              />
+            </svg>
+            <div class="route-grid route-grid--compact">
+              <article class="route-node route-node--y1 reveal">
+                <span class="route-node__bg-num" aria-hidden="true">1</span>
+                <div class="route-node__body">
+                  <span class="route-node__icon" aria-hidden="true"><i class="fa-solid fa-file-lines"></i></span>
+                  <div class="route-node__copy">
+                    <p class="route-node__date">Mar - Ago 2026</p>
+                    <h3>Postulacion</h3>
+                    <p>Envias tu idea o emprendimiento.</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-
-            <article class="faq-item" data-track-faq="faq_equipo">
-              <button class="faq-item__button" type="button" aria-expanded="false">
-                <span class="faq-item__question">¿Puedo postular solo o en equipo?</span>
-                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
-              </button>
-              <div class="faq-item__content">
-                <div class="faq-item__inner">
-                  <p>
-                    Puedes postular de forma individual o con equipo. Recomendamos la formación
-                    de equipos multidisciplinarios para enriquecer la propuesta.
-                  </p>
+              </article>
+              <article class="route-node route-node--y2 reveal">
+                <span class="route-node__bg-num" aria-hidden="true">2</span>
+                <div class="route-node__body">
+                  <span class="route-node__icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                  <div class="route-node__copy">
+                    <p class="route-node__date">Septiembre 2026</p>
+                    <h3>Evaluacion y seleccion</h3>
+                    <p>Se eligen proyectos para etapa formativa.</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-
-            <article class="faq-item" data-track-faq="faq_empresa">
-              <button class="faq-item__button" type="button" aria-expanded="false">
-                <span class="faq-item__question">¿Necesito tener empresa constituida?</span>
-                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
-              </button>
-              <div class="faq-item__content">
-                <div class="faq-item__inner">
-                  <p>
-                    No es necesario. El programa está diseñado para apoyar tanto ideas en fase
-                    inicial (ideación) como proyectos que ya han comenzado su desarrollo, sin
-                    requerir constitución legal previa.
-                  </p>
+              </article>
+              <article class="route-node route-node--y3 reveal">
+                <span class="route-node__bg-num" aria-hidden="true">3</span>
+                <div class="route-node__body">
+                  <span class="route-node__icon" aria-hidden="true"><i class="fa-solid fa-chalkboard-user"></i></span>
+                  <div class="route-node__copy">
+                    <p class="route-node__date">Octubre 2026</p>
+                    <h3>Bootcamp y mentorias</h3>
+                    <p>Preparas tu pitch con acompanamiento.</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-
-            <article class="faq-item" data-track-faq="faq_tiempo">
-              <button class="faq-item__button" type="button" aria-expanded="false">
-                <span class="faq-item__question">¿Cuánto tiempo debo dedicar?</span>
-                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
-              </button>
-              <div class="faq-item__content">
-                <div class="faq-item__inner">
-                  <p>
-                    Se espera una participación activa en los talleres formativos y actividades
-                    de preselección, lo que equivale a un compromiso estimado de 4 a 6 horas
-                    semanales durante las etapas clave.
-                  </p>
+              </article>
+              <article class="route-node route-node--y4 route-node--finale reveal">
+                <span class="route-node__bg-num" aria-hidden="true">4</span>
+                <div class="route-node__body">
+                  <span class="route-node__icon" aria-hidden="true"><i class="fa-solid fa-microphone-lines"></i></span>
+                  <div class="route-node__copy">
+                    <p class="route-node__date">1 Noviembre 2026</p>
+                    <h3>Final Pitch UChile</h3>
+                    <p>Presentacion final y premiacion.</p>
+                  </div>
                 </div>
-              </div>
-            </article>
-
-            <article class="faq-item" data-track-faq="faq_categorias">
-              <button class="faq-item__button" type="button" aria-expanded="false">
-                <span class="faq-item__question">¿Cuáles son las categorías?</span>
-                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
-              </button>
-              <div class="faq-item__content">
-                <div class="faq-item__inner">
-                  <p>
-                    <strong>Ideación:</strong> idea, prueba de concepto o prototipo inicial sin
-                    ventas. <strong>Prototipo/emprendimiento:</strong> prototipo testeado o
-                    producto en mercado con menos de 3 años.
-                  </p>
-                </div>
-              </div>
-            </article>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -611,26 +290,20 @@
             Ganadores y menciones <span>2025</span>
           </h2>
           <p class="section-intro text-center winners-intro">
-            Proyectos que ya dieron el salto. Conoce a los líderes de esta edición.
+            Proyectos que ya dieron el salto. Conoce a los lideres de esta edicion.
           </p>
 
           <div class="winners-block">
             <div class="winners-category-head">
               <span class="winners-category-line" aria-hidden="true"></span>
-              <h3>Categoría Ideación</h3>
+              <h3>Categoria Ideacion</h3>
               <span class="winners-category-line" aria-hidden="true"></span>
             </div>
-
             <div class="winners-grid winners-grid--4">
               <article class="winner-card winner-card--featured winner-card--offset-up reveal">
                 <span class="winner-card__blob winner-card__blob--blue" aria-hidden="true"></span>
                 <div class="winner-profile">
-                  <img
-                    class="winner-profile__img"
-                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/salgado.png"
-                    alt="Felipe Salgado"
-                    loading="lazy"
-                  />
+                  <img class="winner-profile__img" src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/salgado.png" alt="Felipe Salgado" loading="lazy" />
                   <span class="winner-badge winner-badge--gold">1</span>
                 </div>
                 <div class="winner-card__body">
@@ -639,16 +312,10 @@
                   <span class="winner-faculty">Facultad de Medicina</span>
                 </div>
               </article>
-
               <article class="winner-card winner-card--offset-down reveal">
                 <span class="winner-card__blob winner-card__blob--purple" aria-hidden="true"></span>
                 <div class="winner-profile">
-                  <img
-                    class="winner-profile__img"
-                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/thomas.png"
-                    alt="Tomas Jackson"
-                    loading="lazy"
-                  />
+                  <img class="winner-profile__img" src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/thomas.png" alt="Tomas Jackson" loading="lazy" />
                   <span class="winner-badge winner-badge--silver">2</span>
                 </div>
                 <div class="winner-card__body">
@@ -657,16 +324,10 @@
                   <span class="winner-faculty">FCFM</span>
                 </div>
               </article>
-
               <article class="winner-card winner-card--offset-mid reveal">
                 <span class="winner-card__blob winner-card__blob--blue" aria-hidden="true"></span>
                 <div class="winner-profile">
-                  <img
-                    class="winner-profile__img"
-                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/baro.png"
-                    alt="Gerardo Baro"
-                    loading="lazy"
-                  />
+                  <img class="winner-profile__img" src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/baro.png" alt="Gerardo Baro" loading="lazy" />
                   <span class="winner-badge winner-badge--bronze">3</span>
                 </div>
                 <div class="winner-card__body">
@@ -675,16 +336,10 @@
                   <span class="winner-faculty">FCFM</span>
                 </div>
               </article>
-
               <article class="winner-card winner-card--offset-low reveal">
                 <span class="winner-card__blob winner-card__blob--purple" aria-hidden="true"></span>
                 <div class="winner-profile">
-                  <img
-                    class="winner-profile__img"
-                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/almendras.png"
-                    alt="Alonso Almendras"
-                    loading="lazy"
-                  />
+                  <img class="winner-profile__img" src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/almendras.png" alt="Alonso Almendras" loading="lazy" />
                   <span class="winner-badge winner-badge--blue">4</span>
                 </div>
                 <div class="winner-card__body">
@@ -699,20 +354,14 @@
           <div class="winners-block">
             <div class="winners-category-head">
               <span class="winners-category-line" aria-hidden="true"></span>
-              <h3>Categoría Prototipo</h3>
+              <h3>Categoria Prototipo</h3>
               <span class="winners-category-line" aria-hidden="true"></span>
             </div>
-
             <div class="winners-grid winners-grid--3">
               <article class="winner-card winner-card--featured winner-card--offset-up-lg reveal">
                 <span class="winner-card__blob winner-card__blob--blue" aria-hidden="true"></span>
                 <div class="winner-profile winner-profile--lead">
-                  <img
-                    class="winner-profile__img"
-                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/pape.png"
-                    alt="Constanza Pape"
-                    loading="lazy"
-                  />
+                  <img class="winner-profile__img" src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/pape.png" alt="Constanza Pape" loading="lazy" />
                   <span class="winner-badge winner-badge--gold winner-badge--lg">1</span>
                 </div>
                 <div class="winner-card__body">
@@ -721,16 +370,10 @@
                   <span class="winner-faculty">FEN</span>
                 </div>
               </article>
-
               <article class="winner-card winner-card--offset-mid reveal">
                 <span class="winner-card__blob winner-card__blob--purple" aria-hidden="true"></span>
                 <div class="winner-profile">
-                  <img
-                    class="winner-profile__img"
-                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/araya2.png"
-                    alt="Maykeel Araya"
-                    loading="lazy"
-                  />
+                  <img class="winner-profile__img" src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/araya2.png" alt="Maykeel Araya" loading="lazy" />
                   <span class="winner-badge winner-badge--silver">2</span>
                 </div>
                 <div class="winner-card__body">
@@ -739,16 +382,10 @@
                   <span class="winner-faculty">FEN</span>
                 </div>
               </article>
-
               <article class="winner-card winner-card--offset-down-lg reveal">
                 <span class="winner-card__blob winner-card__blob--blue" aria-hidden="true"></span>
                 <div class="winner-profile">
-                  <img
-                    class="winner-profile__img"
-                    src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/castro.png"
-                    alt="Diland Castro"
-                    loading="lazy"
-                  />
+                  <img class="winner-profile__img" src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/castro.png" alt="Diland Castro" loading="lazy" />
                   <span class="winner-badge winner-badge--bronze">3</span>
                 </div>
                 <div class="winner-card__body">
@@ -759,67 +396,119 @@
               </article>
             </div>
           </div>
+
+          <div class="winners-carousel reveal" aria-label="Carrusel de proyectos ganadores">
+            <div class="winners-carousel__head">
+              <h3>Mas proyectos destacados</h3>
+              <div class="winners-carousel__controls">
+                <button class="carousel-btn" type="button" data-carousel-prev aria-label="Anterior">
+                  <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <button class="carousel-btn" type="button" data-carousel-next aria-label="Siguiente">
+                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="winners-carousel__viewport">
+              <div class="winners-carousel__track">
+                <article class="winner-slide">
+                  <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/salgado.png" alt="Felipe Salgado" loading="lazy" />
+                  <h4>Felipe Salgado</h4>
+                  <p>Lagrimark · Ideacion</p>
+                </article>
+                <article class="winner-slide">
+                  <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/thomas.png" alt="Tomas Jackson" loading="lazy" />
+                  <h4>Tomas Jackson</h4>
+                  <p>Quickron · Ideacion</p>
+                </article>
+                <article class="winner-slide">
+                  <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/baro.png" alt="Gerardo Baro" loading="lazy" />
+                  <h4>Gerardo Baro</h4>
+                  <p>Sefit · Ideacion</p>
+                </article>
+                <article class="winner-slide">
+                  <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/almendras.png" alt="Alonso Almendras" loading="lazy" />
+                  <h4>Alonso Almendras</h4>
+                  <p>VelaMicro · Ideacion</p>
+                </article>
+                <article class="winner-slide">
+                  <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/pape.png" alt="Constanza Pape" loading="lazy" />
+                  <h4>Constanza Pape</h4>
+                  <p>Aplicador Mesess Concept · Prototipo</p>
+                </article>
+                <article class="winner-slide">
+                  <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/araya2.png" alt="Maykeel Araya" loading="lazy" />
+                  <h4>Maykeel Araya</h4>
+                  <p>Clervice · Prototipo</p>
+                </article>
+                <article class="winner-slide">
+                  <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/castro.png" alt="Diland Castro" loading="lazy" />
+                  <h4>Diland Castro</h4>
+                  <p>Blummo · Prototipo</p>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section section-gallery-modern reveal" id="galeria">
+      <section class="section section-faq reveal" id="faq">
         <div class="container">
-          <h2 class="text-center">Galería de imágenes 2025</h2>
-          <p class="section-intro text-center">
-            Un vistazo a los momentos clave de la edición 2025 y su comunidad emprendedora.
-          </p>
-          <div class="gallery-grid">
-            <a class="gallery-item gallery-item--lead" href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/8.jpg" target="_blank" rel="noreferrer">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/8-400x284.jpg" alt="Pitch 2025" loading="lazy" />
-            </a>
-            <a class="gallery-item" href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0235.jpg" target="_blank" rel="noreferrer">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0235-400x284.jpg" alt="Pitch 2025" loading="lazy" />
-            </a>
-            <a class="gallery-item" href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0241.jpg" target="_blank" rel="noreferrer">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0241-400x284.jpg" alt="Pitch 2025" loading="lazy" />
-            </a>
-            <a class="gallery-item" href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0249.jpg" target="_blank" rel="noreferrer">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0249-400x284.jpg" alt="Pitch 2025" loading="lazy" />
-            </a>
-            <a class="gallery-item" href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0257.jpg" target="_blank" rel="noreferrer">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0257-400x284.jpg" alt="Pitch 2025" loading="lazy" />
-            </a>
-            <a class="gallery-item" href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0268.jpg" target="_blank" rel="noreferrer">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0268-400x284.jpg" alt="Pitch 2025" loading="lazy" />
-            </a>
-            <a class="gallery-item" href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0285.jpg" target="_blank" rel="noreferrer">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0285-400x284.jpg" alt="Pitch 2025" loading="lazy" />
-            </a>
-            <a class="gallery-item" href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0316.jpg" target="_blank" rel="noreferrer">
-              <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/IMG_0316-400x284.jpg" alt="Pitch 2025" loading="lazy" />
-            </a>
+          <h2 class="text-center faq-title">Preguntas frecuentes</h2>
+          <div class="faq-accordion faq-accordion--short">
+            <article class="faq-item is-active" data-track-faq="faq_eligibilidad">
+              <button class="faq-item__button" type="button" aria-expanded="true">
+                <span class="faq-item__question">Quienes pueden postular</span>
+                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+              </button>
+              <div class="faq-item__content is-open">
+                <div class="faq-item__inner">
+                  <p>
+                    Estudiantes y egresados de pregrado o postgrado de la Universidad de Chile
+                    con proyectos en ideacion o emprendimiento temprano.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="faq-item" data-track-faq="faq_equipo">
+              <button class="faq-item__button" type="button" aria-expanded="false">
+                <span class="faq-item__question">Puedo postular solo o en equipo</span>
+                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+              </button>
+              <div class="faq-item__content">
+                <div class="faq-item__inner">
+                  <p>
+                    Puedes postular de forma individual o en equipo. Se recomienda integrar perfiles
+                    complementarios para fortalecer la propuesta.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="faq-item" data-track-faq="faq_categorias">
+              <button class="faq-item__button" type="button" aria-expanded="false">
+                <span class="faq-item__question">Cuales son las categorias</span>
+                <i class="fa-solid fa-chevron-down faq-item__icon" aria-hidden="true"></i>
+              </button>
+              <div class="faq-item__content">
+                <div class="faq-item__inner">
+                  <p>
+                    <strong>Ideacion:</strong> para ideas o pruebas de concepto. <strong>Prototipo/emprendimiento:</strong>
+                    para proyectos ya testeados o en etapa temprana de mercado.
+                  </p>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section section-final-cta-modern final-cta" id="postula">
-        <div class="container-full">
-          <div class="final-cta-inner">
-            <h2>Es tu momento de emprender</h2>
-            <p>Postula y lleva tu idea al siguiente nivel con apoyo real.</p>
-            <a
-              class="btn btn-primary btn-large"
-              href="#formulario"
-              data-track-click="final_cta_click"
-              data-track-location="final"
-              >Postula aquí</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-form-modern reveal" id="formulario">
+      <section class="section section-form-modern reveal" id="postula">
         <div class="container-full">
           <div class="form-layout">
             <div>
-              <h2>Convocatoria 2025</h2>
+              <h2>Postula a Pitch UChile 2026</h2>
               <p class="section-intro">
-                Completa tus datos y te contactaremos con información del proceso.
+                Completa tus datos y te contactaremos con la informacion oficial del proceso.
               </p>
               <p>
                 <strong>Contacto:</strong>
@@ -828,13 +517,13 @@
             </div>
             <form class="contact-form" data-track-form="pitch_form">
               <p class="form-success" hidden>
-                ¡Gracias! Registramos tu interés. Te contactaremos pronto.
+                Gracias. Registramos tu interes y te contactaremos pronto.
               </p>
               <input type="text" placeholder="Nombre" name="nombre" required />
               <input type="email" placeholder="Email" name="email" required />
-              <input type="text" placeholder="Teléfono" name="telefono" />
-              <textarea placeholder="Cuéntanos tu proyecto" name="consulta" required></textarea>
-              <button type="submit">Enviar postulación</button>
+              <input type="text" placeholder="Telefono" name="telefono" />
+              <textarea placeholder="Cuentanos tu proyecto" name="consulta" required></textarea>
+              <button type="submit">Enviar postulacion</button>
             </form>
           </div>
         </div>
@@ -847,8 +536,8 @@
       </div>
     </footer>
 
-    <script src="./ab-test.js?v=6" defer></script>
-    <script src="./analytics.js?v=6" defer></script>
-    <script src="./ui.js?v=6" defer></script>
+    <script src="./ab-test.js?v=7" defer></script>
+    <script src="./analytics.js?v=7" defer></script>
+    <script src="./ui.js?v=7" defer></script>
   </body>
 </html>

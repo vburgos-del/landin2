@@ -40,7 +40,7 @@
   reveals.forEach((el) => revealObserver.observe(el));
 
   const staggerParents = document.querySelectorAll(
-    ".value-grid, .benefits-grid, .route-grid, .prize-boards, .alliance-grid, .winners-grid, .gallery-grid, .testimonial-grid, .stats-grid"
+    ".value-grid, .countdown-grid, .route-grid, .prize-boards, .winners-grid, .winners-carousel__track, .faq-accordion"
   );
   staggerParents.forEach((grid) => {
     [...grid.children].forEach((child, index) => {
@@ -87,6 +87,85 @@
   );
 
   document.querySelectorAll(".number[data-target]").forEach((el) => statObserver.observe(el));
+
+  const countdownRoot = document.querySelector(".countdown-grid");
+  if (countdownRoot) {
+    const deadlineRaw = countdownRoot.getAttribute("data-final-date");
+    const deadline = deadlineRaw ? new Date(deadlineRaw).getTime() : NaN;
+    const countdownEls = {
+      days: countdownRoot.querySelector("[data-countdown='days']"),
+      hours: countdownRoot.querySelector("[data-countdown='hours']"),
+      minutes: countdownRoot.querySelector("[data-countdown='minutes']"),
+      seconds: countdownRoot.querySelector("[data-countdown='seconds']"),
+    };
+
+    const paintCountdown = () => {
+      if (!Number.isFinite(deadline)) return;
+      const now = Date.now();
+      const diff = Math.max(0, deadline - now);
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      if (countdownEls.days) countdownEls.days.textContent = String(days);
+      if (countdownEls.hours) countdownEls.hours.textContent = String(hours).padStart(2, "0");
+      if (countdownEls.minutes) countdownEls.minutes.textContent = String(minutes).padStart(2, "0");
+      if (countdownEls.seconds) countdownEls.seconds.textContent = String(seconds).padStart(2, "0");
+    };
+
+    paintCountdown();
+    window.setInterval(paintCountdown, 1000);
+  }
+
+  const carousel = document.querySelector(".winners-carousel");
+  if (carousel) {
+    const viewport = carousel.querySelector(".winners-carousel__viewport");
+    const track = carousel.querySelector(".winners-carousel__track");
+    const prevBtn = carousel.querySelector("[data-carousel-prev]");
+    const nextBtn = carousel.querySelector("[data-carousel-next]");
+    const slides = track ? [...track.children] : [];
+    let currentIndex = 0;
+    let autoTimer = null;
+
+    const getStep = () => {
+      if (!slides.length || !viewport) return 0;
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      const styles = window.getComputedStyle(track);
+      const gap = Number.parseFloat(styles.columnGap || styles.gap || "0");
+      return slideWidth + gap;
+    };
+
+    const scrollToIndex = (index) => {
+      if (!viewport || !slides.length) return;
+      currentIndex = (index + slides.length) % slides.length;
+      viewport.scrollTo({
+        left: getStep() * currentIndex,
+        behavior: "smooth",
+      });
+    };
+
+    const next = () => scrollToIndex(currentIndex + 1);
+    const prev = () => scrollToIndex(currentIndex - 1);
+
+    prevBtn?.addEventListener("click", prev);
+    nextBtn?.addEventListener("click", next);
+
+    const startAuto = () => {
+      if (autoTimer || slides.length < 2) return;
+      autoTimer = window.setInterval(next, 4500);
+    };
+    const stopAuto = () => {
+      if (!autoTimer) return;
+      window.clearInterval(autoTimer);
+      autoTimer = null;
+    };
+
+    carousel.addEventListener("mouseenter", stopAuto);
+    carousel.addEventListener("mouseleave", startAuto);
+    startAuto();
+  }
 
   const navLinks = document.querySelectorAll(".top-nav a[href^='#']");
   const sections = [...navLinks]
