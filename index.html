@@ -20,18 +20,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles.css?v=11" />
-    <script src="./analytics.config.js?v=11"></script>
+    <link rel="stylesheet" href="./styles.css?v=26" />
+    <script src="./analytics.config.js?v=23"></script>
   </head>
   <body>
     <nav class="top-nav" aria-label="Secciones principales">
-      <div class="container top-nav-inner">
+      <div class="container-full top-nav-inner">
         <a href="#inicio">Inicio</a>
         <a href="#por-que-postular">Beneficios</a>
         <a href="#premios-detalle">Premios</a>
         <a href="#como-funciona">Proceso</a>
         <a href="#casos">Ganadores</a>
         <a href="#faq">FAQ</a>
+        <a href="#impacto">Impacto</a>
+        <a href="#experiencia">Experiencia</a>
         <a href="#postula" class="top-nav-cta">Postula</a>
       </div>
     </nav>
@@ -52,7 +54,7 @@
         />
       </video>
       <div class="hero-overlay"></div>
-      <div class="hero-content container">
+      <div class="hero-content container-full">
         <img
           class="color-strip"
           src="https://pregrado.fen.uchile.cl/wp-content/uploads/2023/07/colores2.png"
@@ -133,46 +135,117 @@
     </header>
 
     <main>
-      <section class="section section-premios-modern section-premios-hero reveal" id="premios-detalle">
-        <div class="container">
-          <h2 class="text-center premios-title">Premios</h2>
-          <p class="section-intro text-center premios-total">
-            Fondo total de <strong>$8.500.000</strong> para impulsar proyectos en ideación y
-            prototipo.
-          </p>
-          <div class="prize-boards">
-            <article class="prize-panel prize-panel--idea">
-              <div class="prize-head">
-                <span class="prize-head-label">Categoría</span>
-                <h3>Ideación</h3>
+      <section
+        class="section section-premios-console section-premios-hero reveal"
+        id="premios-detalle"
+        data-premios-current="idea"
+      >
+        <div class="container-full premios-console" data-premios-podio>
+          <header class="premios-console__header text-center">
+            <h2 class="premios-console__title">Premios</h2>
+            <p class="premios-console__subtitle">
+              Fondo total a repartir: <strong>$8.500.000</strong>
+            </p>
+            <div
+              class="premios-console__tabs"
+              role="tablist"
+              aria-label="Seleccionar categoría de premios"
+            >
+              <button
+                type="button"
+                class="premios-console__tab is-active"
+                role="tab"
+                aria-selected="true"
+                aria-controls="premios-console-panel"
+                id="premios-tab-idea"
+                data-premios-category="idea"
+              >
+                &gt; [01] IDEACION
+              </button>
+              <button
+                type="button"
+                class="premios-console__tab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="premios-console-panel"
+                id="premios-tab-proto"
+                data-premios-category="prototipo"
+              >
+                &gt; [02] PROTOTIPO
+              </button>
+            </div>
+          </header>
+
+          <div
+            class="premios-console__panel"
+            id="premios-console-panel"
+            role="tabpanel"
+            aria-labelledby="premios-tab-idea"
+          >
+            <section class="premios-console__requirements">
+              <p class="premios-console__eyebrow">Requisitos del tramo</p>
+              <div class="premios-console__req-grid">
+                <article>
+                  <h4>Madurez requerida</h4>
+                  <p id="premios-req-maturity">IDEA EN ETAPA INICIAL</p>
+                </article>
+                <article>
+                  <h4>Tope de financiamiento</h4>
+                  <p id="premios-req-cap">$800.000 CLP</p>
+                </article>
+                <article>
+                  <h4>Formato de cierre</h4>
+                  <p id="premios-req-format">Pitch en vivo + DemoDay</p>
+                </article>
               </div>
-              <ul class="prize-list">
-                <li class="prize-row"><span class="prize-rank">1</span><strong>$800.000</strong></li>
-                <li class="prize-row"><span class="prize-rank">2</span><strong>$600.000</strong></li>
-                <li class="prize-row"><span class="prize-rank">3</span><strong>$400.000</strong></li>
-              </ul>
-              <div class="prize-mentions">
-                <p><span>Menciones especiales</span><strong>$150.000</strong></p>
+            </section>
+
+            <section class="premios-console__distribution">
+              <div class="premios-console__dist-head">
+                <p class="premios-console__eyebrow">Distribucion de premios (data visual)</p>
+                <span>Valores liquidos</span>
               </div>
-            </article>
-            <article class="prize-panel prize-panel--proto">
-              <div class="prize-head">
-                <span class="prize-head-label">Categoría</span>
-                <h3>Prototipo / emprendimiento</h3>
-              </div>
-              <ul class="prize-list">
-                <li class="prize-row"><span class="prize-rank">1</span><strong>$2.000.000</strong></li>
-                <li class="prize-row"><span class="prize-rank">2</span><strong>$1.500.000</strong></li>
-                <li class="prize-row"><span class="prize-rank">3</span><strong>$1.000.000</strong></li>
-              </ul>
-              <div class="prize-mentions">
-                <p><span>Menciones especiales</span><strong>$500.000</strong></p>
-              </div>
-            </article>
+
+              <article class="premios-console__row premios-console__row--first">
+                <div class="premios-console__fill premios-console__fill--first bar-fill"></div>
+                <span class="premios-console__tag">1°</span>
+                <p class="premios-console__label">Primer lugar</p>
+                <strong id="premios-amt-first" class="premios-console__amount">$800.000</strong>
+              </article>
+
+              <article class="premios-console__row">
+                <div class="premios-console__fill premios-console__fill--second bar-fill"></div>
+                <span class="premios-console__tag">2°</span>
+                <p class="premios-console__label">Segundo lugar</p>
+                <strong id="premios-amt-second" class="premios-console__amount">$600.000</strong>
+              </article>
+
+              <article class="premios-console__row">
+                <div class="premios-console__fill premios-console__fill--third bar-fill"></div>
+                <span class="premios-console__tag">3°</span>
+                <p class="premios-console__label">Tercer lugar</p>
+                <strong id="premios-amt-third" class="premios-console__amount">$400.000</strong>
+              </article>
+
+              <article id="premios-card-fourth" class="premios-console__row">
+                <div class="premios-console__fill premios-console__fill--fourth bar-fill"></div>
+                <span class="premios-console__tag">4°</span>
+                <p class="premios-console__label">Cuarto lugar</p>
+                <strong id="premios-amt-fourth" class="premios-console__amount">$250.000</strong>
+              </article>
+
+              <article id="premios-card-mention" class="premios-console__row premios-console__row--mention">
+                <div class="premios-console__fill premios-console__fill--mention bar-fill"></div>
+                <span class="premios-console__tag">SPC</span>
+                <p class="premios-console__label">Menciones especiales</p>
+                <strong id="premios-amt-mention" class="premios-console__amount">$150.000</strong>
+              </article>
+            </section>
           </div>
-          <p class="bases-link text-center">
+
+          <p class="bases-link premios-console__bases text-center">
             <a
-              class="bases-pill bases-pill--alt"
+              class="bases-pill bases-pill--neo"
               href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/01/0030N2025_Bases-Concurso-PITCH_Emprende-con-Impacto-1.pdf"
               target="_blank"
               rel="noreferrer"
@@ -184,27 +257,37 @@
         </div>
       </section>
 
-      <section class="section section-intro-modern reveal" id="por-que-postular">
-        <div class="container">
-          <h2 class="text-center">Por qué postular</h2>
-          <p class="section-intro text-center">
-            Una ruta concreta para pasar de idea a proyecto con apoyo real y visibilidad.
-          </p>
-          <div class="value-grid value-grid--3">
-            <article class="value-card">
+      <section class="section section-benefits-neo reveal" id="por-que-postular">
+        <div class="benefits-neo-deco" aria-hidden="true">
+          <span class="benefits-neo-glow benefits-neo-glow--blue"></span>
+          <span class="benefits-neo-glow benefits-neo-glow--purple"></span>
+        </div>
+        <div class="container-full">
+          <header class="benefits-neo-header text-center">
+            <p class="benefits-neo-badge">
+              <span class="benefits-neo-badge__dot"></span>
+              Beneficios clave
+            </p>
+            <h2>Por qué postular</h2>
+            <p class="section-intro text-center">
+              Una ruta concreta para pasar de idea a proyecto con apoyo real, red y visibilidad.
+            </p>
+          </header>
+          <div class="value-grid value-grid--3 benefits-neo-grid">
+            <article class="value-card benefits-neo-card">
               <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
               <h3>Formación aplicada</h3>
-              <p>Bootcamp y mentorías para aterrizar propuesta de valor y modelo de negocio.</p>
+              <p>Bootcamp y mentorías para aterrizar propuesta de valor, narrativa y modelo de negocio.</p>
             </article>
-            <article class="value-card">
+            <article class="value-card benefits-neo-card">
               <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></span>
               <h3>Red y conexiones</h3>
-              <p>Conecta con jurados, aliados y actores del ecosistema emprendedor.</p>
+              <p>Conecta con jurados, aliados y actores del ecosistema emprendedor de la Universidad.</p>
             </article>
-            <article class="value-card">
+            <article class="value-card benefits-neo-card">
               <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-trophy"></i></span>
               <h3>Visibilidad y premios</h3>
-              <p>Presenta en la final y compite por financiamiento para impulsar tu proyecto.</p>
+              <p>Presenta en la final y accede a financiamiento para impulsar tu proyecto.</p>
             </article>
           </div>
         </div>
@@ -492,8 +575,59 @@
         </div>
       </section>
 
+      <section class="section section-closing reveal" id="impacto" data-track-view="stats_view">
+        <div class="closing-deco" aria-hidden="true">
+          <span class="closing-blob closing-blob--blue"></span>
+          <span class="closing-blob closing-blob--purple"></span>
+        </div>
+        <div class="container-full">
+          <h2 class="text-center closing-title">El impacto en cifras</h2>
+          <p class="section-intro text-center closing-intro">
+            Resultados de ediciones anteriores que demuestran el alcance del programa.
+          </p>
+
+          <div class="impact-stats">
+            <article class="impact-stat value-card">
+              <span class="value-icon" aria-hidden="true"
+                ><i class="fa-solid fa-pen-to-square"></i
+              ></span>
+              <p class="impact-stat__number number" data-target="250">+0</p>
+              <p class="impact-stat__label">Postulaciones</p>
+            </article>
+            <article class="impact-stat value-card">
+              <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-users"></i></span>
+              <p class="impact-stat__number number" data-target="400">+0</p>
+              <p class="impact-stat__label">Postulantes</p>
+            </article>
+            <article class="impact-stat value-card impact-stat--wide">
+              <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-trophy"></i></span>
+              <p class="impact-stat__number number money" data-target="10000000">+0</p>
+              <p class="impact-stat__label">
+                En premios de formación, mentorías y equipamiento tecnológico
+              </p>
+            </article>
+          </div>
+
+          <div class="closing-video" id="experiencia" data-track-view="recap_video_view">
+            <h3 class="closing-video__title">Así se vivió Pitch UChile 2025</h3>
+            <p class="section-intro text-center closing-video__intro">
+              De la idea al escenario: conoce la experiencia completa de quienes participaron.
+            </p>
+            <div class="recap-video">
+              <iframe
+                src="https://www.youtube.com/embed/-StRyxGgH3o"
+                title="Concurso Pitch UChile Emprende con impacto 2025"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section section-faq reveal" id="faq">
-        <div class="container">
+        <div class="container-full">
           <h2 class="text-center faq-title">Preguntas frecuentes</h2>
           <div class="faq-accordion faq-accordion--short">
             <article class="faq-item is-active" data-track-faq="faq_eligibilidad">
@@ -571,13 +705,13 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">
+      <div class="container-full">
         <p>Pitch UChile Emprende con Impacto · Responsabilidad Social Universitaria (RSU) · FEN UChile</p>
       </div>
     </footer>
 
-    <script src="./ab-test.js?v=11" defer></script>
-    <script src="./analytics.js?v=11" defer></script>
-    <script src="./ui.js?v=11" defer></script>
+    <script src="./ab-test.js?v=23" defer></script>
+    <script src="./analytics.js?v=23" defer></script>
+    <script src="./ui.js?v=25" defer></script>
   </body>
 </html>
