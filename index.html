@@ -20,8 +20,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles.css?v=9" />
-    <script src="./analytics.config.js?v=9"></script>
+    <link rel="stylesheet" href="./styles.css?v=10" />
+    <script src="./analytics.config.js?v=10"></script>
   </head>
   <body>
     <nav class="top-nav" aria-label="Secciones principales">
@@ -212,66 +212,133 @@
 
       <section class="section section-route reveal" id="como-funciona" data-track-view="timeline_view">
         <div class="container-full">
-          <h2 class="text-center route-title">Como funciona</h2>
-          <p class="section-intro text-center">
-            Proceso resumido para postular, avanzar y presentar tu proyecto en la final.
-          </p>
+          <header class="route-header text-center">
+            <p class="route-badge">
+              <i class="fa-solid fa-route" aria-hidden="true"></i>
+              Mapa de ruta 2026
+            </p>
+            <h2 class="route-title">El viaje de tu proyecto</h2>
+            <p class="section-intro route-intro">
+              Sigue las fechas clave de Pitch UChile: un camino para transformar tu idea en impacto real.
+            </p>
+          </header>
+
           <div class="route-journey">
             <div class="route-deco" aria-hidden="true">
               <span class="route-blob route-blob--blue"></span>
               <span class="route-blob route-blob--purple"></span>
             </div>
-            <svg class="route-path" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 1000 1000">
+
+            <svg
+              class="route-path-s"
+              aria-hidden="true"
+              preserveAspectRatio="none"
+              viewBox="0 0 1000 500"
+            >
+              <defs>
+                <linearGradient id="routePathGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#003087" />
+                  <stop offset="50%" stop-color="#420277" />
+                  <stop offset="100%" stop-color="#c41230" />
+                </linearGradient>
+              </defs>
               <path
-                d="M 500 0 C 700 200, 300 400, 500 600 C 700 800, 300 900, 500 1000"
+                class="route-path-s__line"
+                d="M 166 125 L 833 125 C 950 125, 950 375, 833 375 L 166 375"
                 fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-                stroke-dasharray="12 12"
+                stroke="url(#routePathGradient)"
+                stroke-width="6"
+                stroke-dasharray="16 16"
+                stroke-linecap="round"
               />
             </svg>
-            <div class="route-grid route-grid--compact">
-              <article class="route-node route-node--y1 reveal">
-                <span class="route-node__bg-num" aria-hidden="true">1</span>
-                <div class="route-node__body">
-                  <span class="route-node__icon" aria-hidden="true"><i class="fa-solid fa-file-lines"></i></span>
+
+            <div class="route-path-mobile" aria-hidden="true">
+              <span class="route-path-mobile__fill"></span>
+            </div>
+
+            <div class="route-grid route-grid--s">
+              <article class="route-node route-node--step-1">
+                <span class="route-node__icon route-node__icon--blue" aria-hidden="true">
+                  <i class="fa-solid fa-file-lines"></i>
+                </span>
+                <div class="route-node__card">
+                  <span class="route-node__bg-num" aria-hidden="true">1</span>
                   <div class="route-node__copy">
-                    <p class="route-node__date">Mar - Ago 2026</p>
-                    <h3>Postulacion</h3>
-                    <p>Envias tu idea o emprendimiento.</p>
+                    <p class="route-node__date route-node__date--blue">Mar – 31 Ago 2026</p>
+                    <h3>Postulación inicial</h3>
+                    <p>Envías tu idea o emprendimiento con foco en impacto económico, social o ambiental.</p>
                   </div>
                 </div>
               </article>
-              <article class="route-node route-node--y2 reveal">
-                <span class="route-node__bg-num" aria-hidden="true">2</span>
-                <div class="route-node__body">
-                  <span class="route-node__icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+
+              <article class="route-node route-node--step-2">
+                <span class="route-node__icon route-node__icon--blue" aria-hidden="true">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <div class="route-node__card">
+                  <span class="route-node__bg-num" aria-hidden="true">2</span>
                   <div class="route-node__copy">
-                    <p class="route-node__date">Septiembre 2026</p>
-                    <h3>Evaluacion y seleccion</h3>
-                    <p>Se eligen proyectos para etapa formativa.</p>
+                    <p class="route-node__date route-node__date--blue">Septiembre 2026</p>
+                    <h3>Evaluación etapa 1</h3>
+                    <p>Revisión de antecedentes y preselección de proyectos postulados.</p>
                   </div>
                 </div>
               </article>
-              <article class="route-node route-node--y3 reveal">
-                <span class="route-node__bg-num" aria-hidden="true">3</span>
-                <div class="route-node__body">
-                  <span class="route-node__icon" aria-hidden="true"><i class="fa-solid fa-chalkboard-user"></i></span>
+
+              <article class="route-node route-node--step-3">
+                <span class="route-node__icon route-node__icon--purple" aria-hidden="true">
+                  <i class="fa-solid fa-bullhorn"></i>
+                </span>
+                <div class="route-node__card">
+                  <span class="route-node__bg-num" aria-hidden="true">3</span>
                   <div class="route-node__copy">
-                    <p class="route-node__date">Octubre 2026</p>
-                    <h3>Bootcamp y mentorias</h3>
-                    <p>Preparas tu pitch con acompanamiento.</p>
+                    <p class="route-node__date route-node__date--purple">Septiembre 2026</p>
+                    <h3>Preseleccionados</h3>
+                    <p>Comunicación oficial para avanzar a la etapa formativa del programa.</p>
                   </div>
                 </div>
               </article>
-              <article class="route-node route-node--y4 route-node--finale reveal">
-                <span class="route-node__bg-num" aria-hidden="true">4</span>
-                <div class="route-node__body">
-                  <span class="route-node__icon" aria-hidden="true"><i class="fa-solid fa-microphone-lines"></i></span>
+
+              <article class="route-node route-node--step-4">
+                <span class="route-node__icon route-node__icon--purple" aria-hidden="true">
+                  <i class="fa-solid fa-video"></i>
+                </span>
+                <div class="route-node__card">
+                  <span class="route-node__bg-num" aria-hidden="true">4</span>
                   <div class="route-node__copy">
-                    <p class="route-node__date">1 Noviembre 2026</p>
-                    <h3>Final Pitch UChile</h3>
-                    <p>Presentacion final y premiacion.</p>
+                    <p class="route-node__date route-node__date--purple">Octubre 2026</p>
+                    <h3>Bootcamp + video pitch</h3>
+                    <p>Formación en pitch, mentorías y entrega de video (máx. 2 min).</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="route-node route-node--step-5">
+                <span class="route-node__icon route-node__icon--accent" aria-hidden="true">
+                  <i class="fa-solid fa-star"></i>
+                </span>
+                <div class="route-node__card">
+                  <span class="route-node__bg-num" aria-hidden="true">5</span>
+                  <div class="route-node__copy">
+                    <p class="route-node__date route-node__date--red">Octubre 2026</p>
+                    <h3>Semifinalistas</h3>
+                    <p>Proyectos seleccionados para la etapa final del concurso.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="route-node route-node--step-6 route-node--finale">
+                <span class="route-node__pulse" aria-hidden="true"></span>
+                <span class="route-node__icon route-node__icon--finale" aria-hidden="true">
+                  <i class="fa-solid fa-flag"></i>
+                </span>
+                <div class="route-node__card route-node__card--finale">
+                  <span class="route-node__bg-num route-node__bg-num--red" aria-hidden="true">6</span>
+                  <div class="route-node__copy">
+                    <p class="route-node__chip">El gran evento</p>
+                    <h3 class="route-node__title-gradient">Pitch final + DemoDay</h3>
+                    <p><strong>1 Noviembre 2026</strong> · Presentación en escenario, visibilidad y premiación.</p>
                   </div>
                 </div>
               </article>
@@ -509,8 +576,8 @@
       </div>
     </footer>
 
-    <script src="./ab-test.js?v=9" defer></script>
-    <script src="./analytics.js?v=9" defer></script>
-    <script src="./ui.js?v=9" defer></script>
+    <script src="./ab-test.js?v=10" defer></script>
+    <script src="./analytics.js?v=10" defer></script>
+    <script src="./ui.js?v=10" defer></script>
   </body>
 </html>
