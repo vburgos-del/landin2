@@ -40,7 +40,7 @@
   reveals.forEach((el) => revealObserver.observe(el));
 
   const staggerParents = document.querySelectorAll(
-    ".value-grid, .countdown-grid, .route-grid, .prize-boards, .winners-grid, .winners-carousel__track, .faq-accordion"
+    ".value-grid, .route-grid, .prize-boards, .faq-accordion"
   );
   staggerParents.forEach((grid) => {
     [...grid.children].forEach((child, index) => {
@@ -88,7 +88,7 @@
 
   document.querySelectorAll(".number[data-target]").forEach((el) => statObserver.observe(el));
 
-  const countdownRoot = document.querySelector(".countdown-grid");
+  const countdownRoot = document.querySelector(".hero-countdown[data-final-date]");
   if (countdownRoot) {
     const deadlineRaw = countdownRoot.getAttribute("data-final-date");
     const deadline = deadlineRaw ? new Date(deadlineRaw).getTime() : NaN;
@@ -121,18 +121,35 @@
     window.setInterval(paintCountdown, 1000);
   }
 
-  const carousel = document.querySelector(".winners-carousel");
+  const carousel = document.querySelector(".winners-carousel--spotlight");
   if (carousel) {
     const viewport = carousel.querySelector(".winners-carousel__viewport");
     const track = carousel.querySelector(".winners-carousel__track");
+    const dotsRoot = carousel.querySelector("[data-carousel-dots]");
     const prevBtn = carousel.querySelector("[data-carousel-prev]");
     const nextBtn = carousel.querySelector("[data-carousel-next]");
     const slides = track ? [...track.children] : [];
     let currentIndex = 0;
     let autoTimer = null;
 
+    const dots = slides.map((_, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "winners-carousel__dot";
+      dot.setAttribute("aria-label", `Ir al ganador ${index + 1}`);
+      dot.addEventListener("click", () => scrollToIndex(index));
+      dotsRoot?.appendChild(dot);
+      return dot;
+    });
+
+    const updateDots = () => {
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("is-active", index === currentIndex);
+      });
+    };
+
     const getStep = () => {
-      if (!slides.length || !viewport) return 0;
+      if (!slides.length || !viewport || !track) return 0;
       const slideWidth = slides[0].getBoundingClientRect().width;
       const styles = window.getComputedStyle(track);
       const gap = Number.parseFloat(styles.columnGap || styles.gap || "0");
@@ -144,8 +161,9 @@
       currentIndex = (index + slides.length) % slides.length;
       viewport.scrollTo({
         left: getStep() * currentIndex,
-        behavior: "smooth",
+        behavior: prefersReducedMotion ? "auto" : "smooth",
       });
+      updateDots();
     };
 
     const next = () => scrollToIndex(currentIndex + 1);
@@ -154,9 +172,23 @@
     prevBtn?.addEventListener("click", prev);
     nextBtn?.addEventListener("click", next);
 
+    viewport?.addEventListener(
+      "scroll",
+      () => {
+        const step = getStep();
+        if (!step) return;
+        const index = Math.round(viewport.scrollLeft / step);
+        if (index !== currentIndex) {
+          currentIndex = index;
+          updateDots();
+        }
+      },
+      { passive: true }
+    );
+
     const startAuto = () => {
-      if (autoTimer || slides.length < 2) return;
-      autoTimer = window.setInterval(next, 4500);
+      if (autoTimer || slides.length < 2 || prefersReducedMotion) return;
+      autoTimer = window.setInterval(next, 5000);
     };
     const stopAuto = () => {
       if (!autoTimer) return;
@@ -166,6 +198,9 @@
 
     carousel.addEventListener("mouseenter", stopAuto);
     carousel.addEventListener("mouseleave", startAuto);
+    carousel.addEventListener("focusin", stopAuto);
+    carousel.addEventListener("focusout", startAuto);
+    updateDots();
     startAuto();
   }
 

@@ -279,53 +279,62 @@ a {
 }
 
 .hero-countdown {
-  width: min(100%, 52rem);
+  width: min(100%, 54rem);
   margin: 1.5rem auto 0;
-  padding: 1.25rem 1.5rem 1.4rem;
-  border-radius: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(8, 20, 48, 0.45);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  padding: 1.1rem 1.2rem 1.25rem;
+  border-radius: 1.35rem;
+  border: 2px solid rgba(255, 206, 0, 0.65);
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
 
 .hero-countdown__date {
-  margin: 0 0 1rem;
-  font-size: 0.78rem;
+  margin: 0 0 0.9rem;
+  font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.88);
+  font-weight: 800;
+  color: #fff;
 }
 
 .hero-countdown__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
-.hero-countdown__item {
+.hero-countdown__cell {
   text-align: center;
+  padding: 0.75rem 0.45rem 0.7rem;
+  border-radius: 0.9rem;
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
 }
 
-.hero-countdown__item strong {
+.hero-countdown__cell strong {
   display: block;
-  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-size: clamp(1.85rem, 5.5vw, 3rem);
   line-height: 1;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
-  color: var(--yellow);
+  color: var(--blue);
   letter-spacing: -0.03em;
 }
 
-.hero-countdown__item span {
+.hero-countdown__cell span {
   display: block;
-  margin-top: 0.45rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
+  margin-top: 0.4rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.78);
-  font-weight: 600;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.hero-countdown.is-finished .hero-countdown__date::after {
+  content: " · Hoy es la final";
 }
 
 .hero-actions {
@@ -1864,8 +1873,8 @@ a {
   letter-spacing: 0.03em;
 }
 
-.winners-carousel {
-  margin-top: 2.5rem;
+.winners-carousel--spotlight {
+  margin-top: 1.5rem;
 }
 
 .winners-carousel__head {
@@ -1876,10 +1885,11 @@ a {
   margin-bottom: 0.85rem;
 }
 
-.winners-carousel__head h3 {
+.winners-carousel__hint {
   margin: 0;
-  color: var(--blue);
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .winners-carousel__controls {
@@ -1913,42 +1923,146 @@ a {
 .winners-carousel__track {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(12rem, 1fr);
-  gap: 1rem;
+  grid-auto-columns: minmax(18rem, 78vw);
+  gap: 1.1rem;
   width: max-content;
+  padding-bottom: 0.25rem;
 }
 
-.winner-slide {
-  width: min(16rem, 68vw);
-  scroll-snap-align: start;
-  border-radius: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.85);
-  background: rgba(255, 255, 255, 0.74);
+@media (min-width: 900px) {
+  .winners-carousel__track {
+    grid-auto-columns: minmax(26rem, 42rem);
+  }
+}
+
+.winner-spotlight {
+  scroll-snap-align: center;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.1rem;
+  align-items: center;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(10px);
-  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
-  padding: 1rem;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.1);
+  padding: 1.1rem;
 }
 
-.winner-slide img {
-  width: 3.5rem;
-  height: 3.5rem;
+.winner-spotlight__media {
+  position: relative;
+  width: 7.5rem;
+  flex-shrink: 0;
+}
+
+.winner-spotlight__media img {
+  width: 7.5rem;
+  height: 7.5rem;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
-  margin-bottom: 0.7rem;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
 }
 
-.winner-slide h4 {
+.winner-spotlight__rank {
+  position: absolute;
+  right: -0.2rem;
+  bottom: -0.2rem;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.45rem;
+  border-radius: 999px;
+  border: 3px solid #fff;
+  display: inline-grid;
+  place-items: center;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.winner-spotlight__rank--gold {
+  background: linear-gradient(135deg, #fbbf24, #d97706);
+}
+
+.winner-spotlight__rank--silver {
+  background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+}
+
+.winner-spotlight__rank--bronze {
+  background: linear-gradient(135deg, #d97706, #92400e);
+}
+
+.winner-spotlight__rank--blue {
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+}
+
+.winner-spotlight__category {
+  position: absolute;
+  top: -0.35rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: var(--purple);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.winner-spotlight__body h4 {
   margin: 0;
   color: #1f2937;
+  font-size: 1.2rem;
+}
+
+.winner-spotlight__project {
+  margin: 0.25rem 0 0;
+  color: var(--blue);
+  font-weight: 800;
   font-size: 1rem;
 }
 
-.winner-slide p {
-  margin: 0.3rem 0 0;
-  color: var(--purple);
+.winner-spotlight__faculty {
+  margin: 0.2rem 0 0.65rem;
+  color: #64748b;
+  font-size: 0.82rem;
   font-weight: 600;
-  font-size: 0.84rem;
+}
+
+.winner-spotlight__body blockquote {
+  margin: 0;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--yellow);
+  color: #334155;
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.winners-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+}
+
+.winners-carousel__dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 0;
+  border-radius: 999px;
+  background: #cbd5e1;
+  cursor: pointer;
+  padding: 0;
+  transition: width 0.2s ease, background 0.2s ease;
+}
+
+.winners-carousel__dot.is-active {
+  width: 1.35rem;
+  background: var(--blue);
 }
 
 .faq-accordion--short {
@@ -2574,6 +2688,19 @@ a {
 
   .hero-countdown__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .winner-spotlight {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .winner-spotlight__media {
+    margin: 0 auto;
+  }
+
+  .winner-spotlight__body blockquote {
+    text-align: left;
   }
 }
 
