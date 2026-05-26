@@ -20,7 +20,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=2" />
     <script src="./analytics.config.js"></script>
   </head>
   <body>
@@ -90,15 +90,15 @@
 
         <div class="hero-actions">
           <a
-            class="btn btn-primary"
+            class="btn btn-primary btn-lg"
             href="#postula"
             data-ab-cta-primary
             data-track-click="hero_postula_click"
             data-track-location="hero"
-            >Postula aquí</a
+            >Quiero postular</a
           >
           <a
-            class="btn btn-secondary"
+            class="btn btn-secondary btn-outline-light"
             href="#como-funciona"
             data-ab-cta-secondary
             data-track-click="hero_como_funciona_click"
@@ -107,18 +107,18 @@
           >
         </div>
         <p class="scroll-hint" aria-hidden="true">
-          <span>Explorar</span>
-          <i class="fa-solid fa-chevron-down"></i>
+          <span class="scroll-hint__label">Explorar</span>
+          <i class="fa-solid fa-chevron-down scroll-hint__icon" aria-hidden="true"></i>
         </p>
       </div>
-      <div class="wave-divider wave-divider--hero" aria-hidden="true"></div>
+      <div class="wave-divider wave-divider--hero wave-divider--to-dark" aria-hidden="true"></div>
     </header>
 
     <main>
-      <section class="section section-light reveal" id="por-que-postular">
+      <section class="section section-benefits-neo reveal" id="por-que-postular">
         <div class="container">
-          <h2 class="text-center">Más que un concurso, una experiencia de emprendimiento</h2>
-          <p class="section-intro text-center">
+          <h2 class="text-center section-title-on-dark">Más que un concurso, una experiencia de emprendimiento</h2>
+          <p class="section-intro section-intro-muted text-center">
             Si tienes una idea que puede generar impacto, este es el espacio para
             validarla, fortalecerla y presentarla ante expertos.
           </p>
@@ -148,35 +148,53 @@
         </div>
       </section>
 
-      <section class="section reveal" id="como-funciona" data-track-view="timeline_view">
+      <section class="section section-timeline-neo reveal" id="como-funciona" data-track-view="timeline_view">
         <div class="container">
-          <h2 class="text-center">Tu camino en Pitch UChile</h2>
-          <p class="section-intro text-center">Un proceso claro de la postulación al escenario final.</p>
-          <div class="timeline">
-            <article class="timeline-step">
-              <span class="step-number">1</span>
-              <h3>Postulación</h3>
-              <p>Envías tu idea o emprendimiento con foco en impacto.</p>
+          <h2 class="text-center section-heading">Tu camino en Pitch UChile</h2>
+          <p class="section-intro section-intro-muted text-center">
+            Un proceso claro de la postulación al escenario final.
+          </p>
+          <div class="timeline timeline--neo">
+            <article class="timeline-step" data-step="1">
+              <span class="step-number" aria-hidden="true"><i class="fa-solid fa-file-lines"></i></span>
+              <p class="step-label">MAR – SEP 2026</p>
+              <h3 class="timeline-step-title">Postulación</h3>
+              <p class="timeline-step-desc">Envías tu idea o emprendimiento con foco en impacto.</p>
             </article>
-            <article class="timeline-step">
-              <span class="step-number">2</span>
-              <h3>Selección</h3>
-              <p>Los proyectos con mayor potencial avanzan a etapa formativa.</p>
+            <article class="timeline-step" data-step="2">
+              <span class="step-number" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <p class="step-label">SELECCIÓN</p>
+              <h3 class="timeline-step-title">Selección</h3>
+              <p class="timeline-step-desc">
+                Los proyectos con mayor potencial avanzan a etapa formativa.
+              </p>
             </article>
-            <article class="timeline-step">
-              <span class="step-number">3</span>
-              <h3>Bootcamp</h3>
-              <p>Formación intensiva para validar y robustecer tu proyecto.</p>
+            <article class="timeline-step" data-step="3">
+              <span class="step-number" aria-hidden="true"><i class="fa-solid fa-bolt"></i></span>
+              <p class="step-label">BOOTCAMP</p>
+              <h3 class="timeline-step-title">Bootcamp</h3>
+              <p class="timeline-step-desc">
+                Formación intensiva para validar y robustecer tu proyecto.
+              </p>
             </article>
-            <article class="timeline-step">
-              <span class="step-number">4</span>
-              <h3>Pitch semifinal</h3>
-              <p>Presentas ante evaluadores y recibes feedback experto.</p>
+            <article class="timeline-step" data-step="4">
+              <span class="step-number" aria-hidden="true"><i class="fa-solid fa-video"></i></span>
+              <p class="step-label">SEMIFINAL</p>
+              <h3 class="timeline-step-title">Pitch semifinal</h3>
+              <p class="timeline-step-desc">
+                Presentas ante evaluadores y recibes feedback experto.
+              </p>
             </article>
-            <article class="timeline-step">
-              <span class="step-number">5</span>
-              <h3>DemoDay</h3>
-              <p>Final en escenario, visibilidad y premiación.</p>
+            <article class="timeline-step timeline-step--finale" data-step="5">
+              <span class="step-number step-number--finale" aria-hidden="true"
+                ><i class="fa-solid fa-star"></i
+              ></span>
+              <span class="step-badge">El gran evento</span>
+              <p class="step-label step-label--on-dark">1 NOV 2026</p>
+              <h3 class="timeline-step-title">DemoDay · Final</h3>
+              <p class="timeline-step-desc">
+                Escenario, visibilidad y premiación ante una audiencia especializada.
+              </p>
             </article>
           </div>
         </div>
@@ -185,11 +203,11 @@
       <section class="section cta-band">
         <div class="container cta-band-inner">
           <div>
-            <h2>No necesitas tener todo resuelto, solo partir.</h2>
+            <h2 class="section-heading">No necesitas tener todo resuelto, solo partir.</h2>
             <p>Aprende, conecta y presenta tu proyecto ante una red que impulsa.</p>
           </div>
           <a
-            class="btn btn-primary"
+            class="btn btn-primary btn-lg btn-pill-strong"
             href="#postula"
             data-track-click="mid_cta_click"
             data-track-location="mid_page"
@@ -200,7 +218,7 @@
 
       <section class="section section-stats reveal" id="social-proof">
         <div class="container">
-          <h2 class="text-center light-heading">Quienes ya lo vivieron</h2>
+          <h2 class="text-center light-heading section-heading">Quienes ya lo vivieron</h2>
           <div class="testimonial-grid" data-track-view="testimonials_view">
             <article class="testimonial-card">
               <h3>Felipe Salgado · Lagrimark</h3>
@@ -252,8 +270,8 @@
       </section>
 
       <section class="section container reveal" id="video">
-        <h2 class="text-center">Así se vivió Pitch UChile 2025</h2>
-        <p class="section-intro text-center">
+        <h2 class="text-center section-heading">Así se vivió Pitch UChile 2025</h2>
+        <p class="section-intro section-intro-muted text-center">
           De la idea al escenario: conoce la experiencia completa de quienes participaron.
         </p>
         <div class="video-wrapper" data-track-view="recap_video_view">
@@ -269,7 +287,7 @@
 
       <section class="section section-light reveal" id="etapas-proyecto">
         <div class="container">
-          <h2 class="text-center">Este concurso es para ti si estás en esta etapa</h2>
+          <h2 class="text-center section-heading">Este concurso es para ti si estás en esta etapa</h2>
           <div class="stage-grid">
             <article class="stage-card">
               <span class="stage-emoji" aria-hidden="true">💡</span>
@@ -292,7 +310,7 @@
 
       <section class="section reveal" id="beneficios">
         <div class="container">
-          <h2 class="text-center">Lo que obtendrás</h2>
+          <h2 class="text-center section-heading">Lo que obtendrás</h2>
           <div class="benefits-grid">
             <article class="benefit-card">
               <h3><i class="fa-solid fa-sack-dollar" aria-hidden="true"></i> Financiamiento</h3>
@@ -332,7 +350,7 @@
 
       <section class="section section-light reveal" id="faq">
         <div class="container">
-          <h2 class="text-center">Preguntas frecuentes</h2>
+          <h2 class="text-center section-heading">Preguntas frecuentes</h2>
           <div class="faq-list">
             <details data-track-faq="faq_eligibilidad">
               <summary>¿Quiénes pueden postular?</summary>
@@ -370,8 +388,8 @@
 
       <section class="section winners reveal" id="casos">
         <div class="container">
-          <h2 class="text-center">Ganadores y menciones 2025</h2>
-          <p class="section-intro text-center">Proyectos que ya dieron el salto.</p>
+          <h2 class="text-center section-heading">Ganadores y menciones 2025</h2>
+          <p class="section-intro section-intro-muted text-center">Proyectos que ya dieron el salto.</p>
 
           <h3 class="category">Categoría Ideación</h3>
           <div class="cards cards-4">
@@ -427,7 +445,7 @@
 
       <section class="section gallery-section reveal" id="galeria">
         <div class="container">
-          <h2 class="text-center">Galería de imágenes 2025</h2>
+          <h2 class="text-center section-heading">Galería de imágenes 2025</h2>
           <div class="gallery-grid">
             <a class="gallery-item" href="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/8.jpg" target="_blank" rel="noreferrer">
               <img src="https://pregrado.fen.uchile.cl/wp-content/uploads/2025/06/8-400x284.jpg" alt="Pitch 2025" loading="lazy" />
@@ -459,10 +477,10 @@
 
       <section class="section final-cta" id="postula">
         <div class="container final-cta-inner">
-          <h2>Es tu momento de emprender</h2>
+          <h2 class="section-heading">Es tu momento de emprender</h2>
           <p>Postula y lleva tu idea al siguiente nivel con apoyo real.</p>
           <a
-            class="btn btn-primary btn-large"
+            class="btn btn-primary btn-lg"
             href="#formulario"
             data-track-click="final_cta_click"
             data-track-location="final"
@@ -474,7 +492,7 @@
       <section class="section container reveal" id="formulario">
         <div class="form-layout">
           <div>
-            <h2>Convocatoria 2025</h2>
+            <h2 class="section-heading">Convocatoria 2025</h2>
             <p class="section-intro">
               Completa tus datos y te contactaremos con información del proceso.
             </p>
@@ -491,7 +509,7 @@
             <input type="email" placeholder="Email" name="email" required />
             <input type="text" placeholder="Teléfono" name="telefono" />
             <textarea placeholder="Cuéntanos tu proyecto" name="consulta" required></textarea>
-            <button type="submit">Enviar postulación</button>
+            <button class="btn btn-primary btn-submit-block" type="submit">Enviar postulación</button>
           </form>
         </div>
       </section>
