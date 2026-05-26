@@ -77,10 +77,10 @@ a {
 .section-heading {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(1.75rem, 3.2vw, 2.45rem);
+  font-size: clamp(2.05rem, 4.4vw, 2.95rem);
   color: var(--ink);
   letter-spacing: -0.03em;
-  line-height: 1.14;
+  line-height: 1.12;
   margin-bottom: 10px;
 }
 
@@ -88,9 +88,9 @@ a {
   color: #f8fafc;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(1.75rem, 3.2vw, 2.45rem);
+  font-size: clamp(2.05rem, 4.4vw, 2.95rem);
   letter-spacing: -0.03em;
-  line-height: 1.14;
+  line-height: 1.12;
   margin-bottom: 10px;
 }
 
@@ -273,10 +273,11 @@ a {
 }
 
 .hero-copy h1 {
-  font-size: clamp(2rem, 4.4vw, 3.2rem);
+  font-size: clamp(2.35rem, 5.2vw, 3.75rem);
   margin: 10px 0 12px;
-  line-height: 1.13;
+  line-height: 1.1;
   font-weight: 800;
+  letter-spacing: -0.035em;
 }
 
 .hero-meta {
@@ -493,7 +494,7 @@ button.btn {
   font-family: var(--font-display);
   font-weight: 800;
   letter-spacing: -0.02em;
-  font-size: 1.2rem;
+  font-size: 1.35rem;
 }
 
 .section-benefits-neo .value-card p {
@@ -554,6 +555,88 @@ button.btn {
   font-weight: 800;
   margin-bottom: 8px;
   letter-spacing: -0.02em;
+  font-size: 1.28rem;
+}
+
+/* Premio total a repartir */
+.section-prize-total {
+  position: relative;
+  background: linear-gradient(155deg, #070f22 0%, #122240 45%, #1b1648 100%);
+  color: #e2e8f0;
+  overflow: hidden;
+}
+
+.section-prize-total::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 85% 130% at 15% -25%, rgba(250, 204, 21, 0.16), transparent 55%),
+    radial-gradient(circle at 94% 55%, rgba(99, 102, 241, 0.22), transparent 48%);
+  pointer-events: none;
+}
+
+.prize-total-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.prize-total__eyebrow {
+  margin: 0 0 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.prize-total__title {
+  margin: 0 0 4px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3.6vw, 2.15rem);
+  letter-spacing: -0.032em;
+  color: #f8fafc;
+  line-height: 1.12;
+}
+
+.prize-total__amount {
+  margin: 14px 0 16px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.prize-total__figure {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 8.6vw, 4.85rem);
+  letter-spacing: -0.038em;
+  line-height: 1;
+  background: linear-gradient(95deg, #fffbeb 0%, var(--yellow) 42%, #eab308 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 4px 28px rgba(250, 204, 21, 0.45));
+}
+
+.prize-total__currency {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: clamp(1.15rem, 2.9vw, 1.6rem);
+  color: rgba(241, 245, 249, 0.92);
+  letter-spacing: 0.08em;
+}
+
+.prize-total__hint {
+  margin: 0;
+  font-size: clamp(1rem, 2.1vw, 1.125rem);
+  line-height: 1.56;
+  color: #94a3b8;
 }
 
 /* Timeline (referencia roadmap) */
@@ -607,18 +690,24 @@ button.btn {
 .timeline--neo .timeline-step[data-step]::after {
   content: attr(data-step);
   position: absolute;
-  right: 0.35rem;
-  top: 0.15rem;
+  right: 0.2rem;
+  top: 0.05rem;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(3.2rem, 8vw, 4.75rem);
+  font-size: clamp(4rem, 10.5vw, 5.85rem);
   line-height: 1;
-  color: rgba(15, 23, 42, 0.068);
+  color: rgba(51, 65, 171, 0.16);
   pointer-events: none;
+  text-shadow:
+    0 2px 22px rgba(129, 140, 248, 0.35),
+    0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .timeline--neo .timeline-step--finale[data-step]::after {
-  color: rgba(255, 255, 255, 0.07);
+  color: rgba(253, 230, 138, 0.18);
+  text-shadow:
+    0 4px 32px rgba(251, 191, 36, 0.38),
+    0 2px 0 rgba(255, 255, 255, 0.12);
 }
 
 .timeline--neo .step-badge {
@@ -683,10 +772,10 @@ button.btn {
   z-index: 1;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: clamp(1.28rem, 2.5vw, 1.55rem);
   color: var(--ink);
   margin: 0 0 8px;
-  letter-spacing: -0.028em;
+  letter-spacing: -0.03em;
   line-height: 1.2;
 }
 
