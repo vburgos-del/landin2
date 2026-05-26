@@ -113,6 +113,8 @@
       if (countdownEls.hours) countdownEls.hours.textContent = String(hours).padStart(2, "0");
       if (countdownEls.minutes) countdownEls.minutes.textContent = String(minutes).padStart(2, "0");
       if (countdownEls.seconds) countdownEls.seconds.textContent = String(seconds).padStart(2, "0");
+
+      countdownRoot.classList.toggle("is-finished", diff === 0);
     };
 
     paintCountdown();

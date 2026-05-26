@@ -20,8 +20,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./styles.css?v=7" />
-    <script src="./analytics.config.js?v=7"></script>
+    <link rel="stylesheet" href="./styles.css?v=8" />
+    <script src="./analytics.config.js?v=8"></script>
   </head>
   <body>
     <nav class="top-nav" aria-label="Secciones principales">
@@ -65,37 +65,63 @@
         />
 
         <div class="hero-copy">
-          <p class="eyebrow" data-ab-eyebrow>Programa de emprendimiento con impacto</p>
-          <h1 data-ab-title>Convierte tu idea en un proyecto con impacto real</h1>
+          <p class="eyebrow" data-ab-eyebrow>De la idea al escenario</p>
+          <h1 data-ab-title>Transforma tu idea en una oportunidad real</h1>
           <p data-ab-subtitle>
-            Participa en Pitch UChile y accede a formación práctica, mentorías,
-            redes y visibilidad para llevar tu emprendimiento al siguiente nivel.
+            Aprende, conecta y presenta tu proyecto ante expertos. Más que un concurso:
+            bootcamp, mentorías y DemoDay.
           </p>
+        </div>
+
+        <div
+          class="hero-countdown countdown-grid"
+          data-final-date="2026-11-01T00:00:00-03:00"
+          aria-label="Cuenta regresiva hacia la final"
+        >
+          <p class="hero-countdown__date">Final Pitch UChile · 1 de noviembre 2026</p>
+          <div class="hero-countdown__grid">
+            <article class="hero-countdown__item">
+              <strong data-countdown="days">00</strong>
+              <span>Días</span>
+            </article>
+            <article class="hero-countdown__item">
+              <strong data-countdown="hours">00</strong>
+              <span>Hrs</span>
+            </article>
+            <article class="hero-countdown__item">
+              <strong data-countdown="minutes">00</strong>
+              <span>Min</span>
+            </article>
+            <article class="hero-countdown__item">
+              <strong data-countdown="seconds">00</strong>
+              <span>Seg</span>
+            </article>
+          </div>
         </div>
 
         <div class="hero-meta">
           <span
-            ><i class="fa-regular fa-calendar" aria-hidden="true"></i> Postulaciones
-            hasta: <strong>31 de agosto 2026</strong></span
+            ><i class="fa-regular fa-calendar" aria-hidden="true"></i> Postulaciones hasta
+            <strong>31 de agosto 2026</strong></span
           >
           <span
             ><i class="fa-solid fa-user-graduate" aria-hidden="true"></i> Estudiantes y
             egresados UChile</span
           >
           <span
-            ><i class="fa-solid fa-leaf" aria-hidden="true"></i> Impacto económico,
-            social y ambiental</span
+            ><i class="fa-solid fa-leaf" aria-hidden="true"></i> Impacto económico, social y
+            ambiental</span
           >
         </div>
 
         <div class="hero-actions">
           <a
-            class="btn btn-primary"
+            class="btn btn-primary btn-large"
             href="#postula"
             data-ab-cta-primary
             data-track-click="hero_postula_click"
             data-track-location="hero"
-            >Postula aquí</a
+            >Quiero postular</a
           >
         </div>
         <p class="scroll-hint" aria-hidden="true">
@@ -107,70 +133,18 @@
     </header>
 
     <main>
-      <section class="section section-intro-modern reveal" id="por-que-postular">
-        <div class="container">
-          <h2 class="text-center">Por qué postular</h2>
-          <p class="section-intro text-center">
-            Una ruta concreta para pasar de idea a proyecto con apoyo real y visibilidad.
-          </p>
-          <div class="value-grid value-grid--3">
-            <article class="value-card">
-              <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
-              <h3>Formación aplicada</h3>
-              <p>Bootcamp y mentorías para aterrizar propuesta de valor y modelo de negocio.</p>
-            </article>
-            <article class="value-card">
-              <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></span>
-              <h3>Red y conexiones</h3>
-              <p>Conecta con jurados, aliados y actores del ecosistema emprendedor.</p>
-            </article>
-            <article class="value-card">
-              <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-trophy"></i></span>
-              <h3>Visibilidad y premios</h3>
-              <p>Presenta en la final y compite por financiamiento para impulsar tu proyecto.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-countdown reveal" id="contador-final">
-        <div class="container">
-          <div class="countdown-card">
-            <p class="countdown-kicker">Final Pitch UChile</p>
-            <h2 class="countdown-title">1 de noviembre 2026</h2>
-            <div class="countdown-grid" data-final-date="2026-11-01T00:00:00-03:00">
-              <article class="countdown-item">
-                <strong data-countdown="days">0</strong>
-                <span>Dias</span>
-              </article>
-              <article class="countdown-item">
-                <strong data-countdown="hours">0</strong>
-                <span>Horas</span>
-              </article>
-              <article class="countdown-item">
-                <strong data-countdown="minutes">0</strong>
-                <span>Minutos</span>
-              </article>
-              <article class="countdown-item">
-                <strong data-countdown="seconds">0</strong>
-                <span>Segundos</span>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-premios-modern reveal" id="premios-detalle">
+      <section class="section section-premios-modern section-premios-hero reveal" id="premios-detalle">
         <div class="container">
           <h2 class="text-center premios-title">Premios</h2>
           <p class="section-intro text-center premios-total">
-            Fondo total de <strong>$8.500.000</strong> para impulsar proyectos en ideacion y prototipo.
+            Fondo total de <strong>$8.500.000</strong> para impulsar proyectos en ideación y
+            prototipo.
           </p>
           <div class="prize-boards">
             <article class="prize-panel prize-panel--idea">
               <div class="prize-head">
-                <span class="prize-head-label">Categoria</span>
-                <h3>Ideacion</h3>
+                <span class="prize-head-label">Categoría</span>
+                <h3>Ideación</h3>
               </div>
               <ul class="prize-list">
                 <li class="prize-row"><span class="prize-rank">1</span><strong>$800.000</strong></li>
@@ -183,7 +157,7 @@
             </article>
             <article class="prize-panel prize-panel--proto">
               <div class="prize-head">
-                <span class="prize-head-label">Categoria</span>
+                <span class="prize-head-label">Categoría</span>
                 <h3>Prototipo / emprendimiento</h3>
               </div>
               <ul class="prize-list">
@@ -207,6 +181,32 @@
               ><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Ver bases oficiales en PDF</a
             >
           </p>
+        </div>
+      </section>
+
+      <section class="section section-intro-modern reveal" id="por-que-postular">
+        <div class="container">
+          <h2 class="text-center">Por qué postular</h2>
+          <p class="section-intro text-center">
+            Una ruta concreta para pasar de idea a proyecto con apoyo real y visibilidad.
+          </p>
+          <div class="value-grid value-grid--3">
+            <article class="value-card">
+              <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+              <h3>Formación aplicada</h3>
+              <p>Bootcamp y mentorías para aterrizar propuesta de valor y modelo de negocio.</p>
+            </article>
+            <article class="value-card">
+              <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></span>
+              <h3>Red y conexiones</h3>
+              <p>Conecta con jurados, aliados y actores del ecosistema emprendedor.</p>
+            </article>
+            <article class="value-card">
+              <span class="value-icon" aria-hidden="true"><i class="fa-solid fa-trophy"></i></span>
+              <h3>Visibilidad y premios</h3>
+              <p>Presenta en la final y compite por financiamiento para impulsar tu proyecto.</p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -536,8 +536,8 @@
       </div>
     </footer>
 
-    <script src="./ab-test.js?v=7" defer></script>
-    <script src="./analytics.js?v=7" defer></script>
-    <script src="./ui.js?v=7" defer></script>
+    <script src="./ab-test.js?v=8" defer></script>
+    <script src="./analytics.js?v=8" defer></script>
+    <script src="./ui.js?v=8" defer></script>
   </body>
 </html>

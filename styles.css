@@ -193,9 +193,9 @@ a {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 28, 70, 0.45) 0%,
-    rgba(0, 48, 135, 0.72) 42%,
-    rgba(0, 22, 58, 0.82) 100%
+    rgba(0, 18, 48, 0.55) 0%,
+    rgba(0, 48, 135, 0.78) 45%,
+    rgba(0, 12, 36, 0.9) 100%
   );
 }
 
@@ -240,11 +240,12 @@ a {
 }
 
 .hero-copy h1 {
-  font-size: clamp(1.75rem, 4vw, 2.85rem);
+  font-size: clamp(2rem, 5.2vw, 3.6rem);
   margin: 12px 0 14px;
-  line-height: 1.15;
+  line-height: 1.05;
   font-weight: 800;
   color: #fff;
+  text-wrap: balance;
 }
 
 .hero-copy p[data-ab-subtitle] {
@@ -275,6 +276,56 @@ a {
 .hero-meta i {
   margin-right: 6px;
   opacity: 0.9;
+}
+
+.hero-countdown {
+  width: min(100%, 52rem);
+  margin: 1.5rem auto 0;
+  padding: 1.25rem 1.5rem 1.4rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(8, 20, 48, 0.45);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.hero-countdown__date {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hero-countdown__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.hero-countdown__item {
+  text-align: center;
+}
+
+.hero-countdown__item strong {
+  display: block;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  line-height: 1;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--yellow);
+  letter-spacing: -0.03em;
+}
+
+.hero-countdown__item span {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 600;
 }
 
 .hero-actions {
@@ -352,6 +403,8 @@ a {
 .btn-primary {
   background: var(--yellow);
   color: #111827;
+  border-radius: 999px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
 }
 
 .btn-secondary {
@@ -1152,6 +1205,16 @@ a {
 
 .section-premios-modern {
   padding-top: 52px;
+}
+
+.section-premios-hero {
+  position: relative;
+  z-index: 3;
+  margin-top: -1.5rem;
+  padding-top: 2.5rem;
+  background-color: #f8fafc;
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 .benefits-title,
@@ -2507,6 +2570,10 @@ a {
   .hero-meta {
     flex-direction: column;
     align-items: center;
+  }
+
+  .hero-countdown__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
