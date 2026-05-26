@@ -1,5 +1,30 @@
-/** Animaciones de entrada y navegación activa */
+/** Animaciones, navegación y micro-interacciones (estilo editorial, sin tema oscuro) */
 (function () {
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const progressBar = document.createElement("div");
+  progressBar.className = "scroll-progress";
+  progressBar.setAttribute("aria-hidden", "true");
+  document.body.appendChild(progressBar);
+
+  const nav = document.querySelector(".top-nav");
+  const heroVideo = document.querySelector(".hero-video");
+
+  const updateScrollUi = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? Math.min(1, scrollTop / docHeight) : 0;
+    progressBar.style.width = `${progress * 100}%`;
+    nav?.classList.toggle("nav-scrolled", scrollTop > 72);
+
+    if (!prefersReducedMotion && heroVideo) {
+      heroVideo.style.transform = `translate3d(0, ${scrollTop * 0.12}px, 0) scale(1.04)`;
+    }
+  };
+
+  window.addEventListener("scroll", updateScrollUi, { passive: true });
+  updateScrollUi();
+
   const reveals = document.querySelectorAll(".reveal");
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -37,5 +62,18 @@
       { threshold: 0.35, rootMargin: "-20% 0px -55% 0px" }
     );
     sections.forEach((s) => navObserver.observe(s.section));
+  }
+
+  const stickyCta = document.querySelector(".sticky-cta");
+  const postula = document.getElementById("postula");
+  if (stickyCta && postula) {
+    const ctaObserver = new IntersectionObserver(
+      ([entry]) => {
+        stickyCta.style.opacity = entry.isIntersecting ? "0" : "1";
+        stickyCta.style.pointerEvents = entry.isIntersecting ? "none" : "auto";
+      },
+      { threshold: 0.15 }
+    );
+    ctaObserver.observe(postula);
   }
 })();
