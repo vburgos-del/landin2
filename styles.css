@@ -7,9 +7,10 @@
   --light: #f3f7ff;
   --border: #d9e2f4;
   --nav-h: 52px;
-  --font-body: "Inter", "Open Sans", Arial, sans-serif;
-  --font-display: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+  /* Cuerpo: monoespaciada (antes “títulos”). Títulos / UI principal: Inter (antes cuerpo). */
+  --font-body: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
+  --font-display: "Inter", "Open Sans", Arial, sans-serif;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --page-gutter: clamp(1rem, 2.2vw + 0.65rem, 4.5rem);
   --content-max: 96rem;
@@ -143,6 +144,7 @@ a {
 }
 
 .top-nav a {
+  font-family: var(--font-display);
   color: #fff;
   text-decoration: none;
   font-size: 0.9rem;
@@ -157,6 +159,7 @@ a {
 }
 
 .top-nav-cta {
+  font-family: var(--font-display);
   background: var(--yellow);
   color: #111827 !important;
   padding: 6px 14px;
@@ -165,6 +168,7 @@ a {
 }
 
 .sticky-cta {
+  font-family: var(--font-display);
   position: fixed;
   right: 18px;
   bottom: 18px;
@@ -285,11 +289,15 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  padding: 8px 14px;
-  border-radius: var(--radius-control);
+  width: min(100%, 28rem);
+  max-width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 10px 20px;
+  border-radius: 6px;
   text-align: center;
+  font-family: var(--font-display);
   font-weight: 700;
 }
 
@@ -311,6 +319,7 @@ a {
 
 .hero-countdown__date {
   margin: 0 0 0.9rem;
+  font-family: var(--font-display);
   font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -412,6 +421,7 @@ a {
 }
 
 .btn {
+  font-family: var(--font-display);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2075,11 +2085,13 @@ a {
 }
 
 .bases-pill {
+  font-family: var(--font-display);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 12px 24px;
+  min-width: min(100%, 22rem);
+  padding: 14px 32px;
   border-radius: var(--radius-control);
   border: 1px solid #e2e8f0;
   background: #fff;
@@ -2302,6 +2314,7 @@ a {
 }
 
 .premios-console__prize-label {
+  font-family: var(--font-display);
   font-size: clamp(1.05rem, 2vw, 1.2rem);
   font-weight: 700;
   color: #475569;
@@ -2317,7 +2330,7 @@ a {
 }
 
 .premios-console__prize-amount {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-weight: 800;
   font-size: clamp(2.4rem, 6.8vw, 3.85rem);
   letter-spacing: -0.036em;
@@ -2350,8 +2363,7 @@ a {
   border-radius: 0.85rem;
   background: #ffffff;
   color: #64748b;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+  font-family: var(--font-body);
   font-size: 0.84rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -2417,13 +2429,13 @@ a {
 }
 
 .premios-console__eyebrow {
-  margin: 0 0 0.75rem;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #64748b;
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  color: var(--blue);
 }
 
 .premios-console__req-grid {
@@ -2457,6 +2469,7 @@ a {
 
 .premios-console__req-grid article h4 {
   margin: 0 0 0.25rem;
+  font-family: var(--font-body);
   font-size: 1rem;
   color: #64748b;
   font-weight: 600;
@@ -2464,34 +2477,19 @@ a {
 
 .premios-console__req-grid article p {
   margin: 0;
+  font-family: var(--font-body);
   font-size: 1.22rem;
   font-weight: 800;
   color: #0f172a;
   line-height: 1.25;
+  transition: opacity 0.28s ease;
 }
 
 .premios-console__dist-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
+  display: block;
   margin-bottom: 0.75rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid rgba(148, 163, 184, 0.25);
-}
-
-.premios-console__dist-head span {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #2563eb;
-}
-
-.section-premios-console[data-premios-current="prototipo"] .premios-console__dist-head span {
-  color: #6d28d9;
 }
 
 .premios-console__row {
@@ -2522,10 +2520,6 @@ a {
 
 .section-premios-console[data-premios-current="prototipo"] .premios-console__row:hover {
   border-color: rgba(124, 58, 237, 0.4);
-}
-
-.premios-console__req-grid article p {
-  transition: opacity 0.28s ease;
 }
 
 #premios-console-panel.is-premios-data-fading .premios-console__amount,
@@ -2657,6 +2651,7 @@ a {
 
 .premios-console__label {
   margin: 0;
+  font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 700;
   color: #1e293b;
@@ -2669,8 +2664,7 @@ a {
     opacity 0.28s ease,
     transform 0.22s ease,
     color 0.22s ease;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
+  font-family: var(--font-body);
   font-size: clamp(1.35rem, 2.5vw, 1.95rem);
   font-weight: 800;
   letter-spacing: 0.01em;
@@ -3661,7 +3655,9 @@ a {
 .contact-form textarea,
 .contact-form button {
   width: 100%;
-  font: inherit;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  line-height: 1.5;
   border-radius: 10px;
   border: 1px solid #c8d5ef;
   padding: 11px 12px;
@@ -3682,6 +3678,7 @@ a {
 .contact-form button {
   border: 0;
   cursor: pointer;
+  font-family: var(--font-display);
   font-weight: 700;
   color: #fff;
   background: linear-gradient(90deg, var(--blue), var(--purple));
@@ -3694,6 +3691,7 @@ a {
 }
 
 .site-footer {
+  font-family: var(--font-display);
   background: var(--blue);
   color: rgba(255, 255, 255, 0.9);
   padding: 24px 0;
