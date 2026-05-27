@@ -85,22 +85,8 @@ a {
   box-sizing: border-box;
 }
 
-.top-nav .top-nav-inner.container-full {
-  max-width: min(var(--premios-console-max), 100%);
-  margin-inline: auto;
-}
-
-.hero-content.container-full {
-  max-width: min(var(--premios-console-max), 100%);
-  margin-inline: auto;
-}
-
-main > .section > .container-full {
-  max-width: min(var(--premios-console-max), 100%);
-  margin-inline: auto;
-}
-
-.site-footer .container-full {
+/* Premios: consola más estrecha que el resto de la página */
+.section-premios-console > .container-full.premios-console {
   max-width: min(var(--premios-console-max), 100%);
   margin-inline: auto;
 }
@@ -308,7 +294,6 @@ main > .section > .container-full {
   align-items: center;
   gap: 10px;
   width: 100%;
-  max-width: var(--premios-console-max);
   margin: 24px auto;
   font-size: 0.92rem;
 }
@@ -340,7 +325,6 @@ main > .section > .container-full {
 
 .hero-countdown {
   width: 100%;
-  max-width: var(--premios-console-max);
   margin: 1.5rem auto 0;
   padding: 1.1rem 1.2rem 1.25rem;
   border-radius: 1.35rem;
@@ -407,7 +391,6 @@ main > .section > .container-full {
   flex-wrap: wrap;
   gap: 12px;
   width: 100%;
-  max-width: var(--premios-console-max);
   margin-inline: auto;
 }
 
@@ -1816,7 +1799,7 @@ main > .section > .container-full {
 .recap-video {
   position: relative;
   width: 100%;
-  max-width: min(72rem, 100%);
+  max-width: 100%;
   margin: 0 auto;
   border-radius: 1.35rem;
   overflow: hidden;
