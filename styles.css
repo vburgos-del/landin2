@@ -15,8 +15,14 @@
   --page-gutter: clamp(1rem, 2.2vw + 0.65rem, 4.5rem);
   --content-max: 96rem;
   --radius-control: 10px;
-  /* Misma anchura máxima que el bloque Premios (panel + filas). */
+  /* Carril único de contenido (Premios / contador / secciones). */
   --premios-console-max: 72rem;
+  /* Estilo tipo contador: vidrio + borde ámbar */
+  --event-glass-bg: rgba(255, 255, 255, 0.14);
+  --event-glass-border: rgba(255, 206, 0, 0.68);
+  --event-glass-blur: 14px;
+  --event-glass-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  --event-glass-glow: 0 0 48px rgba(255, 206, 0, 0.09);
 }
 
 * {
@@ -77,6 +83,26 @@ a {
   margin-inline: auto;
   padding-inline: var(--page-gutter);
   box-sizing: border-box;
+}
+
+.top-nav .top-nav-inner.container-full {
+  max-width: min(var(--premios-console-max), 100%);
+  margin-inline: auto;
+}
+
+.hero-content.container-full {
+  max-width: min(var(--premios-console-max), 100%);
+  margin-inline: auto;
+}
+
+main > .section > .container-full {
+  max-width: min(var(--premios-console-max), 100%);
+  margin-inline: auto;
+}
+
+.site-footer .container-full {
+  max-width: min(var(--premios-console-max), 100%);
+  margin-inline: auto;
 }
 
 .text-center {
@@ -248,7 +274,7 @@ a {
 
 .hero-copy {
   width: 100%;
-  max-width: min(52rem, 100%);
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -294,13 +320,17 @@ a {
   width: 100%;
   max-width: none;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.32);
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.24), rgba(255, 248, 220, 0.1));
+  border: 2px solid var(--event-glass-border);
   padding: 10px 20px;
   border-radius: 6px;
   text-align: center;
   font-family: var(--font-display);
   font-weight: 700;
+  backdrop-filter: blur(var(--event-glass-blur));
+  -webkit-backdrop-filter: blur(var(--event-glass-blur));
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.3), var(--event-glass-glow), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  color: #f8fafc;
 }
 
 .hero-meta i {
@@ -309,14 +339,16 @@ a {
 }
 
 .hero-countdown {
-  width: min(100%, 64rem);
+  width: 100%;
+  max-width: var(--premios-console-max);
   margin: 1.5rem auto 0;
   padding: 1.1rem 1.2rem 1.25rem;
   border-radius: 1.35rem;
-  border: 2px solid rgba(255, 206, 0, 0.65);
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  border: 2px solid var(--event-glass-border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), var(--event-glass-bg));
+  backdrop-filter: blur(var(--event-glass-blur));
+  -webkit-backdrop-filter: blur(var(--event-glass-blur));
+  box-shadow: var(--event-glass-shadow), var(--event-glass-glow);
 }
 
 .hero-countdown__date {
@@ -339,9 +371,9 @@ a {
   text-align: center;
   padding: 0.75rem 0.45rem 0.7rem;
   border-radius: 0.9rem;
-  background: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  background: linear-gradient(180deg, #ffffff 0%, #fffdf5 100%);
+  border: 1px solid rgba(255, 206, 0, 0.35);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .hero-countdown__cell strong {
@@ -375,6 +407,8 @@ a {
   flex-wrap: wrap;
   gap: 12px;
   width: 100%;
+  max-width: var(--premios-console-max);
+  margin-inline: auto;
 }
 
 .scroll-hint {
@@ -590,9 +624,12 @@ a {
   position: relative;
   border-radius: 1.25rem;
   padding: clamp(1.1rem, 2.2vw, 1.45rem);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  box-shadow: 0 10px 30px rgba(2, 8, 23, 0.3);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.07), rgba(255, 249, 220, 0.04));
+  border: 1px solid rgba(255, 206, 0, 0.22);
+  box-shadow:
+    0 10px 30px rgba(2, 8, 23, 0.3),
+    0 0 0 1px rgba(148, 163, 184, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out),
@@ -653,7 +690,8 @@ a {
 }
 
 .route-header {
-  max-width: 42rem;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto 3rem;
 }
 
@@ -670,7 +708,7 @@ a {
 }
 
 .route-intro {
-  max-width: 36rem;
+  max-width: min(42rem, 100%);
   margin-inline: auto;
   color: #64748b;
   font-size: 1.1rem;
@@ -2419,11 +2457,15 @@ a {
 .premios-console__requirements,
 .premios-console__distribution {
   padding: 1.35rem 1.35rem 1.45rem;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(203, 213, 225, 0.7);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 251, 235, 0.72) 100%);
+  border: 1px solid rgba(255, 206, 0, 0.34);
   border-radius: 1.15rem;
-  box-shadow: 0 8px 32px rgba(0, 48, 135, 0.05);
+  box-shadow:
+    0 8px 32px rgba(0, 48, 135, 0.07),
+    0 0 0 1px rgba(255, 206, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .premios-console__distribution {
@@ -2698,9 +2740,11 @@ a {
 
 .bases-pill--neo {
   color: #0f172a;
-  background: #ffffff;
-  border-color: #cbd5e1;
-  box-shadow: 0 6px 20px rgba(0, 51, 135, 0.07);
+  background: linear-gradient(180deg, #ffffff 0%, #fffdf7 100%);
+  border-color: rgba(255, 206, 0, 0.45);
+  box-shadow:
+    0 6px 22px rgba(0, 51, 135, 0.08),
+    inset 0 -2px 0 rgba(255, 206, 0, 0.55);
   transition:
     transform 0.22s ease,
     box-shadow 0.22s ease,
@@ -3212,7 +3256,8 @@ a {
 }
 
 .faq-accordion--short {
-  max-width: min(56rem, 100%);
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
